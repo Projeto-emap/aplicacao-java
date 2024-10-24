@@ -4,11 +4,11 @@ public class Usuario {
     private String email;
     private String senha;
 
-    public Usuario(String senha, String email, String cpf, String nome) {
-        this.senha = senha;
-        this.email = email;
-        this.cpf = cpf;
+    public Usuario(String nome, String cpf, String email, String senha) {
         this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
     }
 
     public String getNome() {

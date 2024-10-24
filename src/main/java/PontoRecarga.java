@@ -1,14 +1,18 @@
 public class PontoRecarga {
     private String nome;
     private String tipoDeLocal;
-    private Integer qtdestacoes;
+    private String endereco;
+    private String tipoDeRecarga;
+    private Integer qtdEstacoes;
     private String tipoConector;
     private String redeDeRecarga;
 
-    public PontoRecarga(String nome, String tipoDeLocal, Integer qtdestacoes, String tipoConector, String redeDeRecarga) {
+    public PontoRecarga(String nome, String tipoDeLocal, String endereco, String tipoDeRecarga, Integer qtdEstacoes, String tipoConector, String redeDeRecarga) {
         this.nome = nome;
         this.tipoDeLocal = tipoDeLocal;
-        this.qtdestacoes = qtdestacoes;
+        this.endereco = endereco;
+        this.tipoDeRecarga = tipoDeRecarga;
+        this.qtdEstacoes = qtdEstacoes;
         this.tipoConector = tipoConector;
         this.redeDeRecarga = redeDeRecarga;
     }
@@ -30,11 +34,11 @@ public class PontoRecarga {
     }
 
     public Integer getQtdestacoes() {
-        return qtdestacoes;
+        return qtdEstacoes;
     }
 
     public void setQtdestacoes(Integer qtdestacoes) {
-        this.qtdestacoes = qtdestacoes;
+        this.qtdEstacoes = qtdestacoes;
     }
 
     public String getTipoConector() {
@@ -51,5 +55,29 @@ public class PontoRecarga {
 
     public void setRedeDeRecarga(String redeDeRecarga) {
         this.redeDeRecarga = redeDeRecarga;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTipoDeRecarga() {
+        return tipoDeRecarga;
+    }
+
+    public void setTipoDeRecarga(String tipoDeRecarga) {
+        this.tipoDeRecarga = tipoDeRecarga;
+    }
+
+    public Integer getQtdEstacoes() {
+        return qtdEstacoes;
+    }
+
+    public void setQtdEstacoes(Integer qtdEstacoes) {
+        this.qtdEstacoes = qtdEstacoes;
     }
 }

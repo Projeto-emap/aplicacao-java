@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
-//        UsuarioDAO usuarioDAO = new UsuarioDAO();
-//
-//        usuarioDAO.consultarUsuario(1);
+
+        String insertSQL = "INSERT INTO pontoRecarga (nome, tipoLocal, endereco, tipoRecarga, qtdEstacoes, tipoConector, rede) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
             Path caminho = Path.of("C:/Users/natha/emap/pontos-recarga.xlsx");
@@ -19,48 +20,35 @@ public class Main {
 
             Workbook workbook = new XSSFWorkbook(arquivo);
 
-            // Acessando a primeira planilha
             Sheet sheet = workbook.getSheetAt(0);
-            System.out.println("Planilha lida com sucesso!");
 
-            // Iterando pelas linhas da planilha
+            Connection con = Conexao.getConnection();
+            PreparedStatement stmt = con.prepareStatement(insertSQL);
+
             for (Row row : sheet) {
-                // Iterando pelas células de cada linha
-                for (Cell cell : row) {
-                    // Obtendo o valor da célula como String, dependendo do tipo
-                    switch (cell.getCellType()) {
-                        case STRING:
-                            System.out.print(cell.getStringCellValue() + "\t");
-                            break;
-                        case NUMERIC:
-                            if (DateUtil.isCellDateFormatted(cell)) {
-                                System.out.print(cell.getDateCellValue() + "\t");
-                            } else {
-                                System.out.print(cell.getNumericCellValue() + "\t");
-                            }
-                            break;
-                        case BOOLEAN:
-                            System.out.print(cell.getBooleanCellValue() + "\t");
-                            break;
-                        case FORMULA:
-                            System.out.print(cell.getCellFormula() + "\t");
-                            break;
-                        default:
-                            System.out.print(" ");
-                    }
+                if (row.getRowNum() == 0) {
+                    continue;
                 }
-                // Pula para a próxima linha
-                System.out.println();
+
+                String colTipoLocal = row.getCell(1).getStringCellValue();
+                String colNome = row.getCell(2).getStringCellValue();
+                String colEndereco = row.getCell(3).getStringCellValue();
+                String colTipoRecarga = row.getCell(4).getStringCellValue();
+                String colQtdEstacoes = row.getCell(5).getStringCellValue();
+                String colTipoConector = row.getCell(6).getStringCellValue();
+                String colRede = row.getCell(7).getStringCellValue();
+
+                stmt.setString(1, colNome);
+                stmt.setString(2, colTipoLocal);
+                stmt.setString(3, colEndereco);
+                stmt.setString(4, colTipoRecarga);
+                stmt.setString(5, colQtdEstacoes);
+                stmt.setString(6, colTipoConector);
+                stmt.setString(7, colRede);
+
+                stmt.executeUpdate();
             }
-
-//        // Acessando a primeira linha da planilha
-//        Row row = sheet.getRow(0);
-//
-//        // Acessando a primeira célula da linha
-//        Cell cell = row.getCell(0);
-//
-//        String valor = cell.getStringCellValue();
-
+            System.out.println("Dados inseridos com sucesso no banco!");
             workbook.close();
         } catch (Exception e) {
             e.printStackTrace();
