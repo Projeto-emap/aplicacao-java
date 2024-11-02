@@ -1,8 +1,6 @@
 import java.sql.*;
 
-import javax.sql.DataSource;
-
-public class Conexao {
+public class ConexaoBanco {
 
     private static final String URL = System.getenv("BD_URL");
     private static final String USER = System.getenv("BD_USER");
