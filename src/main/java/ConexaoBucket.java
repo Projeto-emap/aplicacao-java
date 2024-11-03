@@ -10,7 +10,7 @@ public class ConexaoBucket {
         String accessKey = System.getenv("AWS_ACCESS_KEY_ID");
         String secretKey = System.getenv("AWS_SECRET_ACCESS_KEY");
         String sessionToken = System.getenv("AWS_SESSION_TOKEN");
-        String region = System.getenv("AWS_DEFAULT_REGION");
+        String region = System.getenv("AWS_REGION");
 
         if (accessKey == null || secretKey == null || region == null || sessionToken == null) {
             throw new IllegalStateException("As variáveis de ambiente AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION e AWS_SESSION_TOKEN devem estar definidas.");

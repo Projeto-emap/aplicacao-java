@@ -1,3 +1,5 @@
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.S3Object;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -56,6 +58,53 @@ public class LeitorPlanilha {
 
         } catch (IOException e) {
             logger.error("Erro ao tentar acessar o arquivo: {}", e.getMessage());
+        }
+
+        return pontosRecarga;
+    }
+
+    public List<PontoRecarga> lerPlanilhaBucket(String nomeBucket, String nomeArquivo) {
+
+        AmazonS3 s3Client = ConexaoBucket.getS3Client();
+
+        try (S3Object s3Object = s3Client.getObject(nomeBucket, nomeArquivo);
+             InputStream arquivo = s3Object.getObjectContent()) {
+
+            logger.info("Iniciando leitura da planilha.");
+
+            Workbook workbook = new XSSFWorkbook(arquivo);
+            Sheet sheet = workbook.getSheetAt(0);
+
+            for (Row row : sheet) {
+                if (row.getRowNum() == 0) {
+                    logger.debug("Ignorando a linha de cabeçalho.");
+                    continue;
+                }
+
+                try {
+
+                    String colTipoLocal = row.getCell(1).getStringCellValue();
+                    String colNome = row.getCell(2).getStringCellValue();
+                    String colEndereco = row.getCell(3).getStringCellValue();
+                    String colTipoRecarga = row.getCell(4).getStringCellValue();
+                    String colQtdEstacoes = row.getCell(5).getStringCellValue();
+                    String colTipoConector = row.getCell(6).getStringCellValue();
+                    String colRede = row.getCell(10).getStringCellValue();
+
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, colQtdEstacoes, colTipoConector, colRede);
+                    pontosRecarga.add(pontoRecarga);
+                    logger.debug("Linha lida com sucesso: Nome - {}, Tipo Local - {}, Endereço - {}, Tipo Recarga - {}, Quantidade Estações {}, Tipo Conector - {}, Rede - {}", colNome, colTipoLocal, colEndereco, colTipoRecarga, colQtdEstacoes, colTipoConector, colRede);
+
+                } catch (Exception rowException) {
+                    logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
+                }
+            }
+
+            workbook.close();
+            logger.info("Arquivo de planilha fechado.");
+
+        } catch (Exception e) {
+            logger.error("Erro durante o processo de inserção de dados: {}", e.getMessage());
         }
 
         return pontosRecarga;

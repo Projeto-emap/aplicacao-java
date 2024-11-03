@@ -13,7 +13,7 @@ public class PontoRecargaDAO {
     private static final Logger logger = LoggerFactory.getLogger(PontoRecargaDAO.class);
 
     private void contarLinhasBanco() {
-        String sql = "SELECT COUNT(*) as totalLinhas FROM pontoRecarga";
+        String sql = "SELECT COUNT(*) as totalLinhas FROM pontoDeRecarga";
 
         logger.info("Verificando dados existentes no banco de dados.");
         try (Connection con = ConexaoBanco.getConnection();
@@ -24,18 +24,15 @@ public class PontoRecargaDAO {
                 totalLinhasBanco = rs.getInt("totalLinhas");
             }
         } catch (SQLException e) {
-            logger.error("Falha ao capturar arquivos existentes no banco de dados.");
+            logger.error("Falha ao capturar arquivos existentes no banco de dados: {}", e.getMessage());
         }
     }
 
-    public void inserirPontoRecarga() {
-
-        LeitorPlanilha leitorPlanilha = new LeitorPlanilha();
-        List<PontoRecarga> pontosRecarga = leitorPlanilha.lerPlanilhaLocal("C:/Users/natha/emap/pontos-recarga.xlsx");
+    public void inserirPontoRecarga(List<PontoRecarga> pontosRecarga) {
 
         contarLinhasBanco();
 
-        String sql = "INSERT INTO pontoRecarga (nome, tipoLocal, endereco, tipoRecarga, qtdEstacoes, tipoConector, rede) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO pontoDeRecarga (nome, tipoDeLocal, endereco, tipoDeRecarga, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
