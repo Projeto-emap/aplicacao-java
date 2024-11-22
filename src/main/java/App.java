@@ -16,8 +16,8 @@ public class App {
 //        List<PontoRecarga> pontosRecarga = leitorPlanilha.lerPlanilhaBucket(NOME_BUCKET, NOME_ARQUIVO);
         List<PontoRecarga> pontosRecarga = leitorPlanilha.lerPlanilhaLocal("C:/Users/natha/emap/pontos-recarga.xlsx");
 
-        PontoRecargaDAO pontoRecargaDAO = new PontoRecargaDAO();
-        pontoRecargaDAO.inserirPontoRecarga(pontosRecarga);
+        PontoRecarga pontoRecarga = new PontoRecarga();
+        pontoRecarga.inserirPontoRecarga(pontosRecarga);
 
 //        JSONObject json = new JSONObject();
 //
