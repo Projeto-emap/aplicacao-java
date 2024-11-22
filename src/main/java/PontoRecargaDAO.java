@@ -48,7 +48,7 @@ public class PontoRecargaDAO {
                         stmt.setString(2, pontoRecarga.getTipoDeLocal());
                         stmt.setString(3, pontoRecarga.getEndereco());
                         stmt.setString(4, pontoRecarga.getTipoDeRecarga());
-                        stmt.setString(5, pontoRecarga.getQtdEstacoes());
+                        stmt.setInt(5, pontoRecarga.getQtdEstacoes());
                         stmt.setString(6, pontoRecarga.getTipoConector());
                         stmt.setString(7, pontoRecarga.getRedeDeRecarga());
 

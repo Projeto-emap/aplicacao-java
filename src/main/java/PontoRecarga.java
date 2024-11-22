@@ -6,13 +6,13 @@ public class PontoRecarga {
     private String tipoDeLocal;
     private String endereco;
     private String tipoDeRecarga;
-    private String qtdEstacoes;
+    private Integer qtdEstacoes;
     private String tipoConector;
     private String redeDeRecarga;
 
     public PontoRecarga () {}
 
-    public PontoRecarga(String nome, String tipoDeLocal, String endereco, String tipoDeRecarga, String qtdEstacoes, String tipoConector, String redeDeRecarga) {
+    public PontoRecarga(String nome, String tipoDeLocal, String endereco, String tipoDeRecarga, Integer qtdEstacoes, String tipoConector, String redeDeRecarga) {
         this.nome = nome;
         this.tipoDeLocal = tipoDeLocal;
         this.endereco = endereco;
@@ -38,30 +38,6 @@ public class PontoRecarga {
         this.tipoDeLocal = tipoDeLocal;
     }
 
-    public String getQtdestacoes() {
-        return qtdEstacoes;
-    }
-
-    public void setQtdestacoes(String qtdestacoes) {
-        this.qtdEstacoes = qtdestacoes;
-    }
-
-    public String getTipoConector() {
-        return tipoConector;
-    }
-
-    public void setTipoConector(String tipoConector) {
-        this.tipoConector = tipoConector;
-    }
-
-    public String getRedeDeRecarga() {
-        return redeDeRecarga;
-    }
-
-    public void setRedeDeRecarga(String redeDeRecarga) {
-        this.redeDeRecarga = redeDeRecarga;
-    }
-
     public String getEndereco() {
         return endereco;
     }
@@ -78,11 +54,27 @@ public class PontoRecarga {
         this.tipoDeRecarga = tipoDeRecarga;
     }
 
-    public String getQtdEstacoes() {
+    public Integer getQtdEstacoes() {
         return qtdEstacoes;
     }
 
-    public void setQtdEstacoes(String qtdEstacoes) {
+    public void setQtdEstacoes(Integer qtdEstacoes) {
         this.qtdEstacoes = qtdEstacoes;
+    }
+
+    public String getTipoConector() {
+        return tipoConector;
+    }
+
+    public void setTipoConector(String tipoConector) {
+        this.tipoConector = tipoConector;
+    }
+
+    public String getRedeDeRecarga() {
+        return redeDeRecarga;
+    }
+
+    public void setRedeDeRecarga(String redeDeRecarga) {
+        this.redeDeRecarga = redeDeRecarga;
     }
 }

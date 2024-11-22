@@ -13,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LeitorPlanilha {
     private List<PontoRecarga> pontosRecarga = new ArrayList<>();
@@ -45,7 +47,9 @@ public class LeitorPlanilha {
                     String colTipoConector = row.getCell(6).getStringCellValue();
                     String colRede = row.getCell(10).getStringCellValue();
 
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, colQtdEstacoes, colTipoConector, colRede);
+                    Integer qtdEstacoes = tratarDadosQtdEstacoes(colQtdEstacoes);
+
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, qtdEstacoes, colTipoConector, colRede);
                     pontosRecarga.add(pontoRecarga);
 
                 } catch (Exception rowException) {
@@ -91,7 +95,9 @@ public class LeitorPlanilha {
                     String colTipoConector = row.getCell(6).getStringCellValue();
                     String colRede = row.getCell(10).getStringCellValue();
 
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, colQtdEstacoes, colTipoConector, colRede);
+                    Integer qtdEstacoes = tratarDadosQtdEstacoes(colQtdEstacoes);
+
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, qtdEstacoes, colTipoConector, colRede);
                     pontosRecarga.add(pontoRecarga);
                     logger.debug("Linha lida com sucesso: Nome - {}, Tipo Local - {}, Endereço - {}, Tipo Recarga - {}, Quantidade Estações {}, Tipo Conector - {}, Rede - {}", colNome, colTipoLocal, colEndereco, colTipoRecarga, colQtdEstacoes, colTipoConector, colRede);
 
@@ -108,6 +114,19 @@ public class LeitorPlanilha {
         }
 
         return pontosRecarga;
+    }
+
+    public Integer tratarDadosQtdEstacoes(String qtdEstacoes) {
+        String regex = "\\d";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(qtdEstacoes);
+
+        if (matcher.find()) {
+            return Integer.parseInt(matcher.group());
+        }
+
+        return null;
     }
 
 }
