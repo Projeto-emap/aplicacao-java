@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class BaseDeDados {
+public abstract class BaseDeDados {
+    private String caminho;
+
+    public abstract Integer verificarQtdLinhasInseridas();
 }
