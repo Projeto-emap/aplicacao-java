@@ -18,10 +18,11 @@ import java.util.regex.Pattern;
 
 public class LeitorPlanilha {
     private List<PontoRecarga> pontosRecarga = new ArrayList<>();
+    private List<Emplacamento> emplacamentos = new ArrayList<>();
 
     private Logger logger = LoggerFactory.getLogger(LeitorPlanilha.class);
 
-    public List<PontoRecarga> lerPlanilhaLocal(String caminhoPlanilha) {
+    public List<PontoRecarga> lerPlanilhaPontoRecargaLocal(String caminhoPlanilha) {
         try {
 
             logger.info("Iniciando leitura da planilha.");
@@ -47,9 +48,10 @@ public class LeitorPlanilha {
                     String colTipoConector = row.getCell(6).getStringCellValue();
                     String colRede = row.getCell(10).getStringCellValue();
 
-                    Integer qtdEstacoes = tratarDadosQtdEstacoes(colQtdEstacoes);
+                    Integer qtdEstacoes = formatarQtdEstacoes(colQtdEstacoes);
+                    String cep = extrairCep(colEndereco);
 
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, qtdEstacoes, colTipoConector, colRede);
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, cep, colTipoRecarga, qtdEstacoes, colTipoConector, colRede);
                     pontosRecarga.add(pontoRecarga);
 
                 } catch (Exception rowException) {
@@ -67,7 +69,7 @@ public class LeitorPlanilha {
         return pontosRecarga;
     }
 
-    public List<PontoRecarga> lerPlanilhaBucket(String nomeBucket, String nomeArquivo) {
+    public List<PontoRecarga> lerPlanilhaPontoRecargaBucket(String nomeBucket, String nomeArquivo) {
 
         AmazonS3 s3Client = ConexaoBucket.getS3Client();
 
@@ -95,7 +97,7 @@ public class LeitorPlanilha {
                     String colTipoConector = row.getCell(6).getStringCellValue();
                     String colRede = row.getCell(10).getStringCellValue();
 
-                    Integer qtdEstacoes = tratarDadosQtdEstacoes(colQtdEstacoes);
+                    Integer qtdEstacoes = formatarQtdEstacoes(colQtdEstacoes);
 
                     PontoRecarga pontoRecarga = new PontoRecarga(colNome, colTipoLocal, colEndereco, colTipoRecarga, qtdEstacoes, colTipoConector, colRede);
                     pontosRecarga.add(pontoRecarga);
@@ -116,7 +118,48 @@ public class LeitorPlanilha {
         return pontosRecarga;
     }
 
-    public Integer tratarDadosQtdEstacoes(String qtdEstacoes) {
+    public List<Emplacamento> lerPlanilhaEmplacamentoLocal(String caminhoPlanilha) {
+        try {
+            logger.info("Iniciando leitura da planilha.");
+            Path caminho = Path.of(caminhoPlanilha);
+            InputStream arquivo = Files.newInputStream(caminho);
+
+            Workbook workbook = new XSSFWorkbook(arquivo);
+            Sheet sheet = workbook.getSheetAt(0);
+
+            for (Row row : sheet) {
+                if (row.getRowNum() == 0) {
+                    logger.debug("Ignorando a linha de cabeçalho.");
+                    continue;
+                }
+
+                try {
+                    String colAno = String.valueOf(row.getCell(0).getNumericCellValue());
+                    String colMes = row.getCell(1).getStringCellValue();
+                    String colMunicipio = row.getCell(2).getStringCellValue();
+                    String colTipoCombustivel = row.getCell(4).getStringCellValue();
+                    String colProcedencia = row.getCell(5).getStringCellValue();
+                    Integer colQtdVeiculos = (int) row.getCell(6).getNumericCellValue();
+
+                    Emplacamento emplacamento = new Emplacamento(colAno, colMes, colMunicipio, colTipoCombustivel, colProcedencia, colQtdVeiculos);
+                    emplacamentos.add(emplacamento);
+
+                } catch (Exception rowException) {
+                    logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
+                }
+            }
+
+            workbook.close();
+            logger.info("Arquivo de planilha fechado.");
+
+        } catch (IOException e) {
+            logger.error("Erro ao tentar acessar o arquivo: {}", e.getMessage());
+        }
+
+        return emplacamentos;
+    }
+
+    public Integer formatarQtdEstacoes(String qtdEstacoes) {
         String regex = "\\d";
 
         Pattern pattern = Pattern.compile(regex);
@@ -124,6 +167,19 @@ public class LeitorPlanilha {
 
         if (matcher.find()) {
             return Integer.parseInt(matcher.group());
+        }
+
+        return null;
+    }
+
+    public String extrairCep(String endereco) {
+        String regex = ",(\\d+-\\d+)";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(endereco.replaceAll("\\s", ""));
+
+        if (matcher.find()) {
+            return matcher.group(1);
         }
 
         return null;
