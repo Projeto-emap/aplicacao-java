@@ -7,7 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class Emplacamento {
+public class Emplacamento extends BaseDeDados {
+    private String caminhoPlanilha;
     private String ano;
     private String mes;
     private String municipio;
@@ -16,6 +17,8 @@ public class Emplacamento {
     private Integer qtdVeiculos;
 
     public static final Logger logger = LoggerFactory.getLogger(Emplacamento.class);
+
+    public Emplacamento () {}
 
     public Emplacamento (String ano, String mes, String municipio, String tipoCombustivel, String procedenciaDoVeiculo, Integer qtdVeiculos) {
         this.ano = ano;
@@ -26,7 +29,8 @@ public class Emplacamento {
         this.qtdVeiculos = qtdVeiculos;
     }
 
-    private Integer contarLinhasBanco() {
+    @Override
+    public Integer verificarQtdLinhasInseridas() {
         String sql = "SELECT COUNT(*) as totalLinhas FROM emplacamento";
         int totalLinhasBanco = 0;
 
@@ -45,9 +49,8 @@ public class Emplacamento {
         return totalLinhasBanco;
     }
 
-    public void inserirEmplacamento(List<Emplacamento> emplacamentos) {
-
-        int totalLinhasBanco = contarLinhasBanco();
+    public void inserirDados(List<Emplacamento> emplacamentos) {
+        int totalLinhasBanco = verificarQtdLinhasInseridas();
 
         String sql = "INSERT INTO emplacamento (ano, mes, municipio, tipoCombustivel, procedencia, qtdVeiculos) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -81,6 +84,14 @@ public class Emplacamento {
         } catch (SQLException e) {
             logger.error("Erro ao se conectar com o banco de dados: {}", e.getMessage());
         }
+    }
+
+    public String getCaminhoPlanilha() {
+        return caminhoPlanilha;
+    }
+
+    public void setCaminhoPlanilha(String caminhoPlanilha) {
+        this.caminhoPlanilha = caminhoPlanilha;
     }
 
     public String getAno() {
