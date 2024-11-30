@@ -7,7 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class PontoRecarga {
+public class PontoRecarga extends BaseDeDados {
+    private String caminhoPlanilha;
     private String nome;
     private String tipoDeLocal;
     private String endereco;
@@ -30,7 +31,8 @@ public class PontoRecarga {
         this.redeDeRecarga = redeDeRecarga;
     }
 
-    private Integer contarLinhasBanco() {
+    @Override
+    public Integer verificarQtdLinhasInseridas() {
         String sql = "SELECT COUNT(*) as totalLinhas FROM pontoDeRecarga";
         int totalLinhasBanco = 0;
 
@@ -40,7 +42,7 @@ public class PontoRecarga {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-               totalLinhasBanco = rs.getInt("totalLinhas");
+                totalLinhasBanco = rs.getInt("totalLinhas");
             }
         } catch (SQLException e) {
             logger.error("Falha ao capturar arquivos existentes no banco de dados: {}", e.getMessage());
@@ -49,11 +51,11 @@ public class PontoRecarga {
         return totalLinhasBanco;
     }
 
-    public void inserirPontoRecarga(List<PontoRecarga> pontosRecarga) {
+    public void inserirDados(List<PontoRecarga> pontosRecarga) {
 
-        int totalLinhasBanco = contarLinhasBanco();
+        int totalLinhasBanco = verificarQtdLinhasInseridas();
 
-        String sql = "INSERT INTO pontoDeRecarga (nome, tipoDeLocal, endereco, tipoDeRecarga, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO pontoDeRecarga (nome, tipoDeLocal, cep, tipoDeRecarga, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
@@ -87,6 +89,14 @@ public class PontoRecarga {
         } catch (SQLException e) {
             logger.error("Erro ao se conectar com o banco de dados: {}", e.getMessage());
         }
+    }
+
+    public String getCaminhoPlanilha() {
+        return caminhoPlanilha;
+    }
+
+    public void setCaminhoPlanilha(String caminho) {
+        this.caminhoPlanilha = caminho;
     }
 
     public String getNome() {
