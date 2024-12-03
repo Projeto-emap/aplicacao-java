@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class EmplacamentoHandler extends LeitorPlanilha{
 
@@ -30,17 +32,28 @@ public class EmplacamentoHandler extends LeitorPlanilha{
                 String colProcedencia = row.getCell(5).getStringCellValue();
                 Integer colQtdVeiculos = (int) row.getCell(6).getNumericCellValue();
 
-                if (colMunicipio.equalsIgnoreCase("São Paulo")) {
-                    Emplacamento emplacamento = new Emplacamento(colQtdVeiculos, colTipoCombustivel, colMes, colAno, colProcedencia, colMunicipio);
-                    emplacamentos.add(emplacamento);
+                String anoEmplacamento = tratarAnoEmplacamento(colAno);
 
-                    System.out.println(colMunicipio);
+                if (colMunicipio.equalsIgnoreCase("São Paulo")) {
+                    Emplacamento emplacamento = new Emplacamento(colQtdVeiculos, colTipoCombustivel, colMes, anoEmplacamento, colProcedencia, colMunicipio);
+                    emplacamentos.add(emplacamento);
                 }
 
             } catch (Exception rowException) {
                 logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
             }
         }
+    }
+
+    public String tratarAnoEmplacamento(String anoEmplacamento) {
+        String regex = "\\d+(?=\\.)";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(anoEmplacamento);
+
+        if (matcher.find()) {
+            return matcher.group();
+        }
+        return null;
     }
 
     public List<Emplacamento> getEmplacamentos() {
