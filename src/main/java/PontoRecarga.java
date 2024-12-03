@@ -63,7 +63,7 @@ public class PontoRecarga {
             int totalLinhasInseridas = 0;
             logger.info("Iniciando inserção de dados.");
             for (PontoRecarga pontoRecarga : pontosRecarga) {
-                if (pontosRecarga.indexOf(pontoRecarga) > totalLinhasBanco && totalLinhasInseridas < 100) {
+                if (pontosRecarga.indexOf(pontoRecarga) > totalLinhasBanco) {
 
                     try {
 

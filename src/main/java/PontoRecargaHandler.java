@@ -33,7 +33,6 @@ public class PontoRecargaHandler extends LeitorPlanilha {
         Sheet sheet = workbook.getSheetAt(0);
         int i = 0;
         for (Row row : sheet) {
-            i++;
             if (row.getRowNum() == 0) {
                 logger.debug("Ignorando a linha de cabeçalho.");
                 continue;
@@ -57,12 +56,12 @@ public class PontoRecargaHandler extends LeitorPlanilha {
                 if (cep != null) {
                     PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, bairro, logradouro, numero, qtdEstacoes, colTipoConector, colRede);
                     pontos.add(pontoRecarga);
-                    }
-
-                if (i == 10){
-                    break;
+                    i++;
                 }
 
+                if (i == 10) {
+                    break;
+                }
             } catch (Exception rowException) {
                 logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
             }
@@ -131,10 +130,6 @@ public class PontoRecargaHandler extends LeitorPlanilha {
                 String logradouro = pontoRecargaHandler.getLogradouro();
                 String bairro = pontoRecargaHandler.getBairro();
                 String localidade = pontoRecargaHandler.getLocalidade();
-
-                System.out.println("Logradouro: " + logradouro);
-                System.out.println("Bairro: " + bairro);
-                System.out.println("Cidade: " + localidade);
 
                 this.cep = cep;
                 this.logradouro = logradouro;
