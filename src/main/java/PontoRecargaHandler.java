@@ -31,7 +31,7 @@ public class PontoRecargaHandler extends LeitorPlanilha {
     @Override
     public void processarDados() {
         Sheet sheet = workbook.getSheetAt(0);
-        int i = 0;
+
         for (Row row : sheet) {
             if (row.getRowNum() == 0) {
                 logger.debug("Ignorando a linha de cabeçalho.");
@@ -48,20 +48,18 @@ public class PontoRecargaHandler extends LeitorPlanilha {
 
                 Integer qtdEstacoes = formatarQtdEstacoes(colQtdEstacoes);
                 numero = extrairNumero(colEndereco);
-                System.out.println(numero);
                 cep = extrairCep(colEndereco);
 
-                extrairEndereco(cep);
+//                extrairEndereco(cep);
 
                 if (cep != null) {
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, bairro, logradouro, numero, qtdEstacoes, colTipoConector, colRede);
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, "Bairro teste", "Rua teste", numero, qtdEstacoes, colTipoConector, colRede);
                     pontos.add(pontoRecarga);
-                    i++;
                 }
 
-                if (i == 10) {
-                    break;
-                }
+//                if (i == 10) {
+//                    break;
+//                }
             } catch (Exception rowException) {
                 logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
             }
@@ -89,8 +87,6 @@ public class PontoRecargaHandler extends LeitorPlanilha {
 
         if (matcher.find()) {
             return matcher.group(1);
-        } else {
-            System.out.println("Nenhum número encontrado!");
         }
 
         return null;

@@ -36,6 +36,21 @@ public abstract class LeitorPlanilha {
         }
     }
 
+    public void carregarPlanilhaBucket(String nomeBucket, String nomeArquivo) {
+        AmazonS3 s3Client = ConexaoBucket.getS3Client();
+
+        try (S3Object s3Object = s3Client.getObject(nomeBucket, nomeArquivo);
+             InputStream arquivo = s3Object.getObjectContent()) {
+
+            logger.info("Iniciando carregamento da planilha.");
+
+            this.workbook = new XSSFWorkbook(arquivo);
+
+        } catch (Exception e) {
+            logger.error("Erro durante o processo de carregamento dos dados: {}", e.getMessage());
+        }
+    }
+
     public abstract void processarDados();
 
 

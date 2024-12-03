@@ -1,9 +1,6 @@
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class App {
 
@@ -18,9 +15,11 @@ public class App {
                                A P L I C A Ç Ã O
                     * * * * * * * * * * * * * * * * * * * *
                     
-                    1 - Ler planilha de Pontos de Recarga
-                    2 - Ler planilha de Emplacamentos
-                    3 - Sair
+                    1 - Ler planilha de Pontos de Recarga - Local
+                    2 - Ler planilha de Emplacamentos - Local
+                    3 - Ler planilha de Pontos de Recarga - Bucket
+                    4 - Ler planilha de Emplacamentos - Bucket
+                    5 - Sair
                     """);
 
             opcao = scanner.nextInt();
@@ -43,17 +42,31 @@ public class App {
                 Emplacamento emplacamento = new Emplacamento();
                 emplacamento.inserirDados(emplacamentoHandler.getEmplacamentos());
 
-            } else {
-                System.out.println("Testar outro cenario");
+            } else if (opcao == 3) {
+              String NOME_BUCKET = System.getenv("NOME_BUCKET");
+
+              PontoRecargaHandler pontoRecargaHandler = new PontoRecargaHandler();
+              pontoRecargaHandler.carregarPlanilhaBucket(NOME_BUCKET, "pontos-recarga.xlsx");
+
+              pontoRecargaHandler.processarDados();
+
+              PontoRecarga pontoRecarga = new PontoRecarga();
+              pontoRecarga.inserirDados(pontoRecargaHandler.getPontos());
+
+            } else if (opcao == 4){
+                String NOME_BUCKET = System.getenv("NOME_BUCKET");
+//                String NOME_ARQUIVO = System.getenv("NOME_ARQUIVO");
+
+                EmplacamentoHandler emplacamentoHandler = new EmplacamentoHandler();
+                emplacamentoHandler.carregarPlanilhaBucket(NOME_BUCKET, "emplacamentos.xlsx");
+
+                emplacamentoHandler.processarDados();
+
+                Emplacamento emplacamento = new Emplacamento();
+                emplacamento.inserirDados(emplacamentoHandler.getEmplacamentos());
             }
-        } while (opcao != 3);
+        } while (opcao != 5);
 
-//        String NOME_BUCKET = System.getenv("NOME_BUCKET");
-//        String NOME_ARQUIVO = System.getenv("NOME_ARQUIVO");
-
-//        List<PontoRecarga> pontosRecarga = leitorPlanilha.lerPlanilhaPontoRecargaBucket(NOME_BUCKET, NOME_ARQUIVO);
-
-//        List<Emplacamento> emplacamentos = leitorPlanilha.lerPlanilhaPontoRecargaLocal("C:/Users/natha/emap/pontos-recarga.xlsx");
 
 //        pontoRecarga.inserirPontoRecarga(pontosRecarga);
 

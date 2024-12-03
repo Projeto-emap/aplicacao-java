@@ -34,13 +34,16 @@ public class EmplacamentoHandler extends LeitorPlanilha{
 
                 String anoEmplacamento = tratarAnoEmplacamento(colAno);
 
-                if (colMunicipio.equalsIgnoreCase("São Paulo")) {
-                    Emplacamento emplacamento = new Emplacamento(colQtdVeiculos, colTipoCombustivel, colMes, anoEmplacamento, colProcedencia, colMunicipio);
-                    emplacamentos.add(emplacamento);
+                if (colTipoCombustivel.equalsIgnoreCase("El Font In") || colTipoCombustivel.equalsIgnoreCase("El Font Ex")) {
+
+                    if (colMunicipio.equalsIgnoreCase("São Paulo")) {
+                        Emplacamento emplacamento = new Emplacamento(colQtdVeiculos, colTipoCombustivel, colMes, anoEmplacamento, colProcedencia, colMunicipio);
+                        emplacamentos.add(emplacamento);
+                    }
                 }
 
             } catch (Exception rowException) {
-                logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
+                logger.error("Erro ao processar a linha: {}", row.getRowNum(), rowException);
             }
         }
     }

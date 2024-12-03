@@ -1,6 +1,8 @@
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,40 +57,91 @@ public class PontoRecarga {
 
         int totalLinhasBanco = obterLinhasInseridas();
 
-        String sql = "INSERT INTO pontoDeRecarga (nome, cep, bairro, rua, numero, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sqlVerificar = """
+                SELECT COUNT(*)
+                FROM pontoDeRecarga
+                WHERE nome = ? AND cep = ? AND numero = ?
+        """;
+
+        String sqlInserir = "INSERT INTO pontoDeRecarga (nome, cep, bairro, rua, numero, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        PontoRecargaHandler pontoRecargaHandler = new PontoRecargaHandler();
+//        pontoRecargaHandler.extrairEndereco(cep);
 
         try (Connection con = ConexaoBanco.getConnection();
-             PreparedStatement stmt = con.prepareStatement(sql)) {
+             PreparedStatement stmtVerificar = con.prepareStatement(sqlVerificar);
+             PreparedStatement stmtInserir = con.prepareStatement(sqlInserir)) {
 
             int totalLinhasInseridas = 0;
             logger.info("Iniciando inserção de dados.");
             for (PontoRecarga pontoRecarga : pontosRecarga) {
-                if (pontosRecarga.indexOf(pontoRecarga) > totalLinhasBanco) {
+//                if (pontosRecarga.indexOf(pontoRecarga) > totalLinhasBanco && totalLinhasInseridas < 10) {
 
-                    try {
+                stmtVerificar.setString(1, pontoRecarga.getNome());
+                stmtVerificar.setString(2, pontoRecarga.getCep());
+                stmtVerificar.setString(3, pontoRecarga.getNumero());
 
-                        stmt.setString(1, pontoRecarga.getNome());
-                        stmt.setString(2, pontoRecarga.getCep());
-                        stmt.setString(3, pontoRecarga.getBairro());
-                        stmt.setString(4, pontoRecarga.getRua());
-                        stmt.setString(5, pontoRecarga.getNumero());
-                        stmt.setInt(6, pontoRecarga.getQtdEstacoes());
-                        stmt.setString(7, pontoRecarga.getTipoConector());
-                        stmt.setString(8, pontoRecarga.getRedeDeRecarga());
+                try (ResultSet rs = stmtVerificar.executeQuery()) {
+                    if (rs.next() && rs.getInt(1) == 0) {
+                        logger.debug("Registro não encontrado no banco, preparando para inserção.");
 
-                        stmt.executeUpdate();
+                        pontoRecargaHandler.extrairEndereco(cep);
+
+                        stmtInserir.setString(1, pontoRecarga.getNome());
+                        stmtInserir.setString(2, pontoRecarga.getCep());
+                        stmtInserir.setString(3, pontoRecarga.getBairro());
+                        stmtInserir.setString(4, pontoRecarga.getRua());
+                        stmtInserir.setString(5, pontoRecarga.getNumero());
+                        stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
+                        stmtInserir.setString(7, pontoRecarga.getTipoConector());
+                        stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
+
+                        stmtInserir.executeUpdate();
+//                        logger.info("Registro inserido com sucesso: {}", pontoRecarga);
                         logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getRua(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
 
-                    } catch (SQLException e) {
-                        logger.error("Erro ao inserir ponto de recarga: {}", e.getMessage());
-                    }
+                        totalLinhasInseridas++;
 
-                    totalLinhasInseridas++;
+                    } else {
+                        logger.debug("Registro já existente: {}", pontoRecarga);
+                    }
                 }
+
+//                    try {
+//
+//                        stmtInserir.setString(1, pontoRecarga.getNome());
+//                        stmtInserir.setString(2, pontoRecarga.getCep());
+//                        stmtInserir.setString(3, pontoRecarga.getBairro());
+//                        stmtInserir.setString(4, pontoRecarga.getRua());
+//                        stmtInserir.setString(5, pontoRecarga.getNumero());
+//                        stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
+//                        stmtInserir.setString(7, pontoRecarga.getTipoConector());
+//                        stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
+//
+//                        stmtInserir.executeUpdate();
+//                        logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getRua(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
+//
+//                        totalLinhasInseridas++;
+//
+//                    } catch (SQLException e) {
+//                        logger.error("Erro ao inserir ponto de recarga: {}", e.getMessage());
+//                    }
+
+//                    totalLinhasInseridas++;
+//                }
+            }
+
+            if (totalLinhasInseridas > 0) {
+                Slack slack = new Slack();
+                slack.enviarMensagemPontoRecarga();
             }
 
         } catch (SQLException e) {
             logger.error("Erro ao se conectar com o banco de dados: {}", e.getMessage());
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
 
