@@ -7,30 +7,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class Emplacamento extends BaseDeDados {
-    private String caminhoPlanilha;
-    private String ano;
-    private String mes;
-    private String municipio;
-    private String tipoCombustivel;
-    private String procedenciaDoVeiculo;
+public class Emplacamento {
     private Integer qtdVeiculos;
+    private String tipoCombustivel;
+    private String mesEmplacamento;
+    private String anoEmplacamento;
+    private String procedencia;
+    private String municipio;
 
     public static final Logger logger = LoggerFactory.getLogger(Emplacamento.class);
 
     public Emplacamento () {}
 
-    public Emplacamento (String ano, String mes, String municipio, String tipoCombustivel, String procedenciaDoVeiculo, Integer qtdVeiculos) {
-        this.ano = ano;
-        this.mes = mes;
-        this.municipio = municipio;
-        this.tipoCombustivel = tipoCombustivel;
-        this.procedenciaDoVeiculo = procedenciaDoVeiculo;
+    public Emplacamento (Integer qtdVeiculos, String tipoCombustivel, String mesEmplacamento, String anoEmplacamento, String procedencia, String municipio) {
         this.qtdVeiculos = qtdVeiculos;
+        this.tipoCombustivel = tipoCombustivel;
+        this.mesEmplacamento = mesEmplacamento;
+        this.anoEmplacamento = anoEmplacamento;
+        this.procedencia = procedencia;
+        this.municipio = municipio;
     }
 
-    @Override
-    public Integer verificarQtdLinhasInseridas() {
+    public Integer obterLinhasInseridas() {
         String sql = "SELECT COUNT(*) as totalLinhas FROM emplacamento";
         int totalLinhasBanco = 0;
 
@@ -50,9 +48,9 @@ public class Emplacamento extends BaseDeDados {
     }
 
     public void inserirDados(List<Emplacamento> emplacamentos) {
-        int totalLinhasBanco = verificarQtdLinhasInseridas();
+        int totalLinhasBanco = obterLinhasInseridas();
 
-        String sql = "INSERT INTO emplacamento (ano, mes, municipio, tipoCombustivel, procedencia, qtdVeiculos) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO emplacamento (qtdCarros, tipoCombustivel, mesEmplacamento, anoEmplacamento, procedencia) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
@@ -60,22 +58,21 @@ public class Emplacamento extends BaseDeDados {
             int totalLinhasInseridas = 0;
             logger.info("Iniciando inserção de dados.");
             for (Emplacamento emplacamento : emplacamentos) {
-                if (emplacamentos.indexOf(emplacamento) > totalLinhasBanco && totalLinhasInseridas < 100) {
+                if (emplacamentos.indexOf(emplacamento) > totalLinhasBanco && totalLinhasInseridas < 1000) {
 
                     try {
 
-                        stmt.setString(1, emplacamento.getAno());
-                        stmt.setString(2, emplacamento.getMes());
-                        stmt.setString(3, emplacamento.getMunicipio());
-                        stmt.setString(4, emplacamento.getTipoCombustivel());
-                        stmt.setString(5, emplacamento.getProcedenciaDoVeiculo());
-                        stmt.setInt(6, emplacamento.getQtdVeiculos());
+                        stmt.setInt(1, emplacamento.getQtdVeiculos());
+                        stmt.setString(2, emplacamento.getTipoCombustivel());
+                        stmt.setString(3, emplacamento.getMesEmplacamento());
+                        stmt.setString(4, emplacamento.getAnoEmplacamento());
+                        stmt.setString(5, emplacamento.getProcedencia());
 
                         stmt.executeUpdate();
-                        logger.debug("Linha inserida com sucesso: Ano - {}, Mês - {}, Município - {}, Tipo de combustível - {}, Procedência do veículo - {}, Quantidade de veículos - {}", emplacamento.getAno(), emplacamento.getMes(), emplacamento.getMunicipio(), emplacamento.getTipoCombustivel(), emplacamento.getProcedenciaDoVeiculo(), emplacamento.getQtdVeiculos());
+                        logger.debug("Linha inserida com sucesso: Quantidade de veículos - {}, Tipo de combustível - {}, Mês - {}, Ano - {},  Procedência do veículo - {}", emplacamento.getQtdVeiculos() , emplacamento.getTipoCombustivel(), emplacamento.getMesEmplacamento(), emplacamento.getAnoEmplacamento(), emplacamento.getProcedencia());
 
                     } catch (SQLException e) {
-                        logger.error("Erro ao inserir ponto de recarga: {}", e.getMessage());
+                        logger.error("Erro ao inserir emplacamento: {}", e.getMessage());
                     }
 
                     totalLinhasInseridas++;
@@ -86,37 +83,14 @@ public class Emplacamento extends BaseDeDados {
         }
     }
 
-    public String getCaminhoPlanilha() {
-        return caminhoPlanilha;
+    public Integer getQtdVeiculos() {
+        return qtdVeiculos;
     }
 
-    public void setCaminhoPlanilha(String caminhoPlanilha) {
-        this.caminhoPlanilha = caminhoPlanilha;
+    public void setQtdVeiculos(Integer qtdVeiculos) {
+        this.qtdVeiculos = qtdVeiculos;
     }
 
-    public String getAno() {
-        return ano;
-    }
-
-    public void setAno(String ano) {
-        this.ano = ano;
-    }
-
-    public String getMes() {
-        return mes;
-    }
-
-    public void setMes(String mes) {
-        this.mes = mes;
-    }
-
-    public String getMunicipio() {
-        return municipio;
-    }
-
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
-    }
 
     public String getTipoCombustivel() {
         return tipoCombustivel;
@@ -126,19 +100,35 @@ public class Emplacamento extends BaseDeDados {
         this.tipoCombustivel = tipoCombustivel;
     }
 
-    public String getProcedenciaDoVeiculo() {
-        return procedenciaDoVeiculo;
+    public String getMesEmplacamento() {
+        return mesEmplacamento;
     }
 
-    public void setProcedenciaDoVeiculo(String procedenciaDoVeiculo) {
-        this.procedenciaDoVeiculo = procedenciaDoVeiculo;
+    public void setMesEmplacamento(String mesEmplacamento) {
+        this.mesEmplacamento = mesEmplacamento;
     }
 
-    public Integer getQtdVeiculos() {
-        return qtdVeiculos;
+    public String getAnoEmplacamento() {
+        return anoEmplacamento;
     }
 
-    public void setQtdVeiculos(Integer qtdVeiculos) {
-        this.qtdVeiculos = qtdVeiculos;
+    public void setAnoEmplacamento(String anoEmplacamento) {
+        this.anoEmplacamento = anoEmplacamento;
+    }
+
+    public String getProcedencia() {
+        return procedencia;
+    }
+
+    public void setProcedencia(String procedencia) {
+        this.procedencia = procedencia;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
     }
 }

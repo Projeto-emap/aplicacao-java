@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -24,28 +25,26 @@ public class App {
 
             opcao = scanner.nextInt();
 
-            LeitorPlanilha leitorPlanilha = new LeitorPlanilha();
-
             if (opcao == 1) {
+                PontoRecargaHandler pontoRecargaHandler = new PontoRecargaHandler();
+                pontoRecargaHandler.carregarPlanilha("C:/Users/natha/emap/pontos-recarga.xlsx");
+
+                pontoRecargaHandler.processarDados();
+
                 PontoRecarga pontoRecarga = new PontoRecarga();
-                pontoRecarga.setCaminhoPlanilha("C:/Users/natha/emap/pontos-recarga.xlsx");
+                pontoRecarga.inserirDados(pontoRecargaHandler.getPontos());
 
-                List<PontoRecarga> pontosRecarga = leitorPlanilha.lerPlanilhaPontoRecargaLocal(pontoRecarga.getCaminhoPlanilha());
-
-                List<PontoRecarga> novosPontos = leitorPlanilha.lerPlanilhaPontoRecargaLocal(pontoRecarga.getCaminhoPlanilha());
-                pontoRecarga.inserirDados(novosPontos);
             } else if (opcao == 2){
+                EmplacamentoHandler emplacamentoHandler = new EmplacamentoHandler();
+                emplacamentoHandler.carregarPlanilha("C:/Users/natha/emap/emplacamentos.xlsx");
+
+                emplacamentoHandler.processarDados();
+
                 Emplacamento emplacamento = new Emplacamento();
-                emplacamento.setCaminhoPlanilha("C:/Users/natha/emap/emplacamentos.xlsx");
+                emplacamento.inserirDados(emplacamentoHandler.getEmplacamentos());
 
-                List<Emplacamento> emplacamentos = leitorPlanilha.lerPlanilhaEmplacamentoLocal(emplacamento.getCaminhoPlanilha());
-
-                List<Emplacamento> novoEmplacamento = leitorPlanilha.lerPlanilhaEmplacamentoLocal(emplacamento.getCaminhoPlanilha());
-                emplacamento.inserirDados(novoEmplacamento);
             } else {
-                Endereco endereco = new Endereco();
-
-                endereco.extrairEndereco("07713-600");
+                System.out.println("Testar outro cenario");
             }
         } while (opcao != 3);
 
