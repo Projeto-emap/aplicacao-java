@@ -2928,3 +2928,271 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 03-12-2024 10:58:01 DEBUG - Registro não encontrado no banco, preparando para inserção.
 03-12-2024 10:58:12 DEBUG - Linha inserida com sucesso: Nome - Hotel Intercity Paulista - Zletric, CEP - 01414-000, Bairro - Bairro teste, Rua - Rua teste, Número 294, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
 03-12-2024 10:58:12 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:57:59 INFO  - Iniciando carregamento da planilha
+03-12-2024 12:58:00 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 12:58:00 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 12:58:01 INFO  - Iniciando inserção de dados.
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@55f45b92
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@67fe380b
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@3dedb4a6
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@415e0bcb
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@49d98dc5
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@1d81e101
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@bf71cec
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@30cdae70
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@2577d6c8
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@6c000e0c
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@44f9779c
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@5e8a459
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@4c9e9fb8
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@40147317
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@19542407
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@c7a977f
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@6d868997
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@74a195a4
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@2fa3be26
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@3af37506
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@7c0da600
+03-12-2024 12:58:01 DEBUG - Registro já existente: PontoRecarga@21ae6e73
+03-12-2024 12:58:01 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:58:12 DEBUG - Linha inserida com sucesso: Nome - Zletric Edifício Torre João Salem, CEP - 01311-200, Bairro - Bairro teste, Rua - Rua teste, Número 1079, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 12:58:12 DEBUG - Registro já existente: PontoRecarga@1f1cae23
+03-12-2024 12:58:12 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:58:22 DEBUG - Linha inserida com sucesso: Nome - Centro Automotivo Porto Seguro Rio Branco - 7kw, CEP - 01206-001, Bairro - Bairro teste, Rua - Rua teste, Número 1448, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 12:58:22 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:58:32 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Setor Offices, CEP - 01310-928, Bairro - Bairro teste, Rua - Rua teste, Número 2064, Quantidade de Estações - 4, Tipo de Conector - 4 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 12:58:32 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:58:43 DEBUG - Linha inserida com sucesso: Nome - Netpark - Unidade Safra Paulista, CEP - 01404-000, Bairro - Bairro teste, Rua - Rua teste, Número 450, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 12:58:43 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:58:53 DEBUG - Linha inserida com sucesso: Nome - Edifício Comercial Paulista 500, CEP - 01310-000, Bairro - Bairro teste, Rua - Rua teste, Número 500, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 12:58:53 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:03 DEBUG - Linha inserida com sucesso: Nome - ALD Automotive Brazil, CEP - 01533-000, Bairro - Bairro teste, Rua - Rua teste, Número 222, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 3 kW, Rede de Recarga 
+03-12-2024 12:59:03 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:14 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Cristal Tower, CEP - 01415-000, Bairro - Bairro teste, Rua - Rua teste, Número 904, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 12:59:14 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:24 DEBUG - Linha inserida com sucesso: Nome - Fleury Unidade Paraíso, CEP - 01323-020, Bairro - Bairro teste, Rua - Rua teste, Número 130, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 12:59:24 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:34 DEBUG - Linha inserida com sucesso: Nome - Zletric - Trianon Corporate, CEP - 01418-100, Bairro - Bairro teste, Rua - Rua teste, Número 680, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 12:59:34 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:45 DEBUG - Linha inserida com sucesso: Nome - Teatro Porto - estacionamento, CEP - 01216-012, Bairro - Bairro teste, Rua - Rua teste, Número 740, Quantidade de Estações - 8, Tipo de Conector - 8 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 12:59:45 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 12:59:55 DEBUG - Linha inserida com sucesso: Nome - Santa Catarina - Zletric, CEP - 01311-000, Bairro - Bairro teste, Rua - Rua teste, Número 283, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 12:59:55 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:00:05 DEBUG - Linha inserida com sucesso: Nome - Condomínio Santa Catarina - Zletric, CEP - 01311-000, Bairro - Bairro teste, Rua - Rua teste, Número 283, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:00:05 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:00:16 DEBUG - Linha inserida com sucesso: Nome - Colegio São Luiz Estapar, CEP - 01310-300, Bairro - Bairro teste, Rua - Rua teste, Número 2378, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 3 kW, Rede de Recarga 
+03-12-2024 13:00:16 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:00:26 ERROR - Erro ao se conectar com o banco de dados: Data truncation: Data too long for column 'cep' at row 1
+03-12-2024 13:01:37 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:01:37 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:01:37 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:01:37 INFO  - Iniciando inserção de dados.
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@57adfab0
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@5af97169
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@31da6b2e
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@70242f38
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@48c3205a
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@4390f46e
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@2d746ce4
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@1948ea69
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@49798e84
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3015db78
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@545607f2
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@27c04377
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@67403656
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@7f9ab969
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@746cd757
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@2098d37d
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@65fd6708
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@127f9161
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@2532b351
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@6a2eea2a
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3b0ee03a
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@6c298dc
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@723ed581
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@796065aa
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@2c306a57
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@d8948cd
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3b7b05a8
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@7abe27bf
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@38a1c423
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@38eb2fb0
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@7351a16e
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3ac04654
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3ed0918d
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@66ec9390
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@3c0fbd3a
+03-12-2024 13:01:37 DEBUG - Registro já existente: PontoRecarga@54562ea6
+03-12-2024 13:01:37 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:01:49 ERROR - Erro ao se conectar com o banco de dados: Data truncation: Data too long for column 'cep' at row 1
+03-12-2024 13:04:46 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:04:46 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:04:46 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:04:46 INFO  - Iniciando inserção de dados.
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@6136998b
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@b8a7e43
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@56f71edb
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@2a27cb34
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@6fd1660
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@5e8604bf
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@4e2916c3
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@ae7950d
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@66c83fc8
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@621f89b8
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@2822c6ff
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@53e3a87a
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@7e9da981
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@3d43fe
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@676ff3b0
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@5fb7183b
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@5f80fa43
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@7159139f
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@3db64bd4
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@576c5536
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@5a8ba37c
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@232cce0
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@352e787a
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@15bc339
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@385ef531
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@205b132e
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@3cbcd8f3
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@9a2ec9b
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@2301b75
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@2f5c1332
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@7cab1508
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@258ee7de
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@6d171ce0
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@705f83a7
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@6e1d4137
+03-12-2024 13:04:46 DEBUG - Registro já existente: PontoRecarga@29a4f594
+03-12-2024 13:04:46 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:04:57 ERROR - Erro ao se conectar com o banco de dados: Data truncation: Data too long for column 'cep' at row 1
+03-12-2024 13:06:54 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:06:54 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:06:54 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:06:54 INFO  - Iniciando inserção de dados.
+03-12-2024 13:06:54 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:04 DEBUG - Linha inserida com sucesso: Nome - Shopping Light, CEP - 01048-100, Bairro - Bairro teste, Rua - Rua teste, Número 23, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:07:04 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:14 DEBUG - Linha inserida com sucesso: Nome - Zletric - WRK Tower, CEP - 01503-001, Bairro - Bairro teste, Rua - Rua teste, Número 823, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 13:07:14 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:24 DEBUG - Linha inserida com sucesso: Nome - ibis budget SP Centro São João, CEP - 01036-100, Bairro - Bairro teste, Rua - Rua teste, Número 1140, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Power2Go
+03-12-2024 13:07:24 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:35 DEBUG - Linha inserida com sucesso: Nome - Power2Go - ibis budget SP Centro São João, CEP - 01036-100, Bairro - Bairro teste, Rua - Rua teste, Número 1140, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Power2Go
+03-12-2024 13:07:35 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:45 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #2 - 1ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:07:45 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:07:55 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #3 - 4ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:07:55 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:06 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #1 - 1ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:08:07 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:17 DEBUG - Linha inserida com sucesso: Nome - Sala São Paulo, CEP - 01218-020, Bairro - Bairro teste, Rua - Rua teste, Número 16, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Autocharge
+03-12-2024 13:08:17 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:27 DEBUG - Linha inserida com sucesso: Nome - Rosewood São Paulo, CEP - 01332-000, Bairro - Bairro teste, Rua - Rua teste, Número 435, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:08:27 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:38 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício Long Stay Bela Cintra, CEP - 01415-001, Bairro - Bairro teste, Rua - Rua teste, Número 521, Quantidade de Estações - 3, Tipo de Conector - 3 Conectores Tipo 2, Rede de Recarga Rede Intelbras
+03-12-2024 13:08:38 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:48 DEBUG - Linha inserida com sucesso: Nome - Shopping Cidade São Paulo, CEP - 01333-001, Bairro - Bairro teste, Rua - Rua teste, Número 525, Quantidade de Estações - 3, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Zletric
+03-12-2024 13:08:48 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:08:58 DEBUG - Linha inserida com sucesso: Nome - Alameda Min Rocha Azevedo 38 Prédio, CEP - 01410-001, Bairro - Bairro teste, Rua - Rua teste, Número 38, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga 
+03-12-2024 13:08:58 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:09:09 DEBUG - Linha inserida com sucesso: Nome - Shopping Pátio Higienópolis, CEP - 01238-000, Bairro - Bairro teste, Rua - Rua teste, Número 618, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Sollus Indústria Eletrônica
+03-12-2024 13:09:09 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:09:19 DEBUG - Linha inserida com sucesso: Nome - Edifício Eluma, CEP - 01310-100, Bairro - Bairro teste, Rua - Rua teste, Número 1294, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:09:19 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:09:29 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Baltimore, CEP - 01227-000, Bairro - Bairro teste, Rua - Rua teste, Número 525, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:09:29 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:09:40 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Portland, CEP - 01227-200, Bairro - Bairro teste, Rua - Rua teste, Número 2071, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2 de 11 kW, Rede de Recarga 
+03-12-2024 13:09:40 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:09:50 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Angélica Professional Offices, CEP - 01228-200, Bairro - Bairro teste, Rua - Rua teste, Número 1968, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:09:50 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:10:00 DEBUG - Linha inserida com sucesso: Nome - Zletric - Shopping Cidade São Paulo, CEP - 01310-100, Bairro - Bairro teste, Rua - Rua teste, Número 1230, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 13:10:00 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:14:25 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:14:27 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:14:27 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:14:27 INFO  - Iniciando inserção de dados.
+03-12-2024 13:14:27 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:14:39 DEBUG - Linha inserida com sucesso: Nome - Shopping Light, CEP - 01048-100, Bairro - Bairro teste, Rua - Rua teste, Número 23, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:14:39 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:14:49 DEBUG - Linha inserida com sucesso: Nome - Zletric - WRK Tower, CEP - 01503-001, Bairro - Bairro teste, Rua - Rua teste, Número 823, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 13:14:49 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:14:59 DEBUG - Linha inserida com sucesso: Nome - ibis budget SP Centro São João, CEP - 01036-100, Bairro - Bairro teste, Rua - Rua teste, Número 1140, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Power2Go
+03-12-2024 13:14:59 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:15:10 DEBUG - Linha inserida com sucesso: Nome - Power2Go - ibis budget SP Centro São João, CEP - 01036-100, Bairro - Bairro teste, Rua - Rua teste, Número 1140, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Power2Go
+03-12-2024 13:15:10 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:15:20 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #2 - 1ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:15:20 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:15:30 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #3 - 4ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:15:30 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:15:40 DEBUG - Linha inserida com sucesso: Nome - Frei caneca #1 - 1ºSubsolo Carregador Parkstrom, CEP - 01307-001, Bairro - Bairro teste, Rua - Rua teste, Número 565, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:15:40 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:15:50 DEBUG - Linha inserida com sucesso: Nome - Sala São Paulo, CEP - 01218-020, Bairro - Bairro teste, Rua - Rua teste, Número 16, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Autocharge
+03-12-2024 13:15:50 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:16:00 DEBUG - Linha inserida com sucesso: Nome - Rosewood São Paulo, CEP - 01332-000, Bairro - Bairro teste, Rua - Rua teste, Número 435, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:16:00 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:16:11 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício Long Stay Bela Cintra, CEP - 01415-001, Bairro - Bairro teste, Rua - Rua teste, Número 521, Quantidade de Estações - 3, Tipo de Conector - 3 Conectores Tipo 2, Rede de Recarga Rede Intelbras
+03-12-2024 13:17:27 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:17:28 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:17:28 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:17:29 INFO  - Iniciando inserção de dados.
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@718607eb
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@757f675c
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@676f0a60
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@535b8c24
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@55b62629
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@5e63cad
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@33a053d
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@20921b9b
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@5ba745bc
+03-12-2024 13:17:29 DEBUG - Registro já existente: PontoRecarga@55b5e331
+03-12-2024 13:17:29 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:17:40 DEBUG - Linha inserida com sucesso: Nome - Shopping Cidade São Paulo, CEP - 01333-001, Bairro - Bairro teste, Rua - Rua teste, Número 525, Quantidade de Estações - 3, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Zletric
+03-12-2024 13:17:40 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:17:50 DEBUG - Linha inserida com sucesso: Nome - Alameda Min Rocha Azevedo 38 Prédio, CEP - 01410-001, Bairro - Bairro teste, Rua - Rua teste, Número 38, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga 
+03-12-2024 13:17:50 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:00 DEBUG - Linha inserida com sucesso: Nome - Shopping Pátio Higienópolis, CEP - 01238-000, Bairro - Bairro teste, Rua - Rua teste, Número 618, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Sollus Indústria Eletrônica
+03-12-2024 13:18:00 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:11 DEBUG - Linha inserida com sucesso: Nome - Edifício Eluma, CEP - 01310-100, Bairro - Bairro teste, Rua - Rua teste, Número 1294, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:18:11 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:21 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Baltimore, CEP - 01227-000, Bairro - Bairro teste, Rua - Rua teste, Número 525, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:18:21 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:31 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Portland, CEP - 01227-200, Bairro - Bairro teste, Rua - Rua teste, Número 2071, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2 de 11 kW, Rede de Recarga 
+03-12-2024 13:18:31 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:41 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Angélica Professional Offices, CEP - 01228-200, Bairro - Bairro teste, Rua - Rua teste, Número 1968, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga 
+03-12-2024 13:18:41 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:18:51 DEBUG - Linha inserida com sucesso: Nome - Zletric - Shopping Cidade São Paulo, CEP - 01310-100, Bairro - Bairro teste, Rua - Rua teste, Número 1230, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+03-12-2024 13:18:51 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:19:01 DEBUG - Linha inserida com sucesso: Nome - Netpark - J. Safra, CEP - 01307-003, Bairro - Bairro teste, Rua - Rua teste, Número 1355, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga 
+03-12-2024 13:19:01 DEBUG - Registro não encontrado no banco, preparando para inserção.
+03-12-2024 13:19:11 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Oregon, CEP - 01227-200, Bairro - Bairro teste, Rua - Rua teste, Número 2133, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede WEMOB
+03-12-2024 13:43:30 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:43:34 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:43:36 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:43:37 INFO  - Dados verificados com sucesso!
+03-12-2024 13:43:37 INFO  - Iniciando inserção de dados.
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 305, Tipo de combustível - EL FONT EX, Mês - abril, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 665, Tipo de combustível - EL FONT EX, Mês - abril, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 194, Tipo de combustível - EL FONT IN, Mês - abril, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 150, Tipo de combustível - EL FONT IN, Mês - abril, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 302, Tipo de combustível - EL FONT EX, Mês - fevereiro, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 665, Tipo de combustível - EL FONT EX, Mês - fevereiro, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 198, Tipo de combustível - EL FONT IN, Mês - fevereiro, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 149, Tipo de combustível - EL FONT IN, Mês - fevereiro, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 305, Tipo de combustível - EL FONT EX, Mês - janeiro, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:43:37 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 665, Tipo de combustível - EL FONT EX, Mês - janeiro, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:44:42 INFO  - Iniciando carregamento da planilha
+03-12-2024 13:44:45 DEBUG - Ignorando a linha de cabeçalho.
+03-12-2024 13:44:47 INFO  - Verificando dados existentes no banco de dados.
+03-12-2024 13:44:47 INFO  - Dados verificados com sucesso!
+03-12-2024 13:44:47 INFO  - Iniciando inserção de dados.
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 198, Tipo de combustível - EL FONT IN, Mês - janeiro, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 149, Tipo de combustível - EL FONT IN, Mês - janeiro, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 299, Tipo de combustível - EL FONT EX, Mês - junho, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 665, Tipo de combustível - EL FONT EX, Mês - junho, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 191, Tipo de combustível - EL FONT IN, Mês - junho, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 150, Tipo de combustível - EL FONT IN, Mês - junho, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 302, Tipo de combustível - EL FONT EX, Mês - maio, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 665, Tipo de combustível - EL FONT EX, Mês - maio, Ano - 2021,  Procedência do veículo - NACIONAL
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 192, Tipo de combustível - EL FONT IN, Mês - maio, Ano - 2021,  Procedência do veículo - IMPORTADO
+03-12-2024 13:44:47 DEBUG - Linha inserida com sucesso: Quantidade de veículos - 150, Tipo de combustível - EL FONT IN, Mês - maio, Ano - 2021,  Procedência do veículo - NACIONAL

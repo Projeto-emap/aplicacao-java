@@ -105,40 +105,40 @@ public class PontoRecargaHandler extends LeitorPlanilha {
         return null;
     }
 
-    public void extrairEndereco(String cep) {
-        String url = "https://viacep.com.br/ws/" + cep + "/json/";
-
-        HttpClient client = HttpClient.newBuilder()
-                .connectTimeout(Duration.ofSeconds(10))
-                .build();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .GET()
-                .build();
-
-        try {
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            if (response.statusCode() == 200) {
-                ObjectMapper mapper = new ObjectMapper();
-                PontoRecargaHandler pontoRecargaHandler = mapper.readValue(response.body(), PontoRecargaHandler.class);
-
-
-                String logradouro = pontoRecargaHandler.getLogradouro();
-                String bairro = pontoRecargaHandler.getBairro();
-                String localidade = pontoRecargaHandler.getLocalidade();
-
-                this.cep = cep;
-                this.logradouro = logradouro;
-                this.bairro = bairro;
-                this.localidade = localidade;
-
-            } else {
-                System.out.println("Erro na consulta do CEP. Código: " + response.statusCode());
-            }
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void extrairEndereco(String cep) {
+//        String url = "https://viacep.com.br/ws/" + cep + "/json/";
+//
+//        HttpClient client = HttpClient.newBuilder()
+//                .connectTimeout(Duration.ofSeconds(10))
+//                .build();
+//        HttpRequest request = HttpRequest.newBuilder()
+//                .uri(URI.create(url))
+//                .GET()
+//                .build();
+//
+//        try {
+//            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+//            if (response.statusCode() == 200) {
+//                ObjectMapper mapper = new ObjectMapper();
+//                PontoRecargaHandler pontoRecargaHandler = mapper.readValue(response.body(), PontoRecargaHandler.class);
+//
+//
+//                String logradouro = pontoRecargaHandler.getLogradouro();
+//                String bairro = pontoRecargaHandler.getBairro();
+//                String localidade = pontoRecargaHandler.getLocalidade();
+//
+//                this.cep = cep;
+//                this.logradouro = logradouro;
+//                this.bairro = bairro;
+//                this.localidade = localidade;
+//
+//            } else {
+//                System.out.println("Erro na consulta do CEP. Código: " + response.statusCode());
+//            }
+//        } catch (IOException | InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public String getCep () {
         return cep;

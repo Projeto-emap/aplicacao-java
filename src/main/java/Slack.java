@@ -17,14 +17,14 @@ public class Slack {
 
 
     private static HttpClient client = HttpClient.newHttpClient();
-    private static final String URL = "https://hooks.slack.com/services/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";
+    private static final String URL = System.getenv("URL_SLACK");
 
     public Slack() {
         this.random = new Random();
 
         this.mensagensEmplacamento = new ArrayList<>();
         mensagensEmplacamento.add("🚗 Novos emplacamentos adicionados! Consulte os dados para mais insights.");
-        mensagensEmplacamento.add("📊 Atualização concluída: novos veículos elétricos registrados no sistema.");
+        mensagensEmplacamento.add("📊 Atualização concluída: emplacamentos registrados no sistema.");
         mensagensEmplacamento.add("⚡ Novos emplacamentos detectados! Verifique os dados atualizados agora mesmo.");
 
         this.mensagensPontoRecarga = new ArrayList<>();
