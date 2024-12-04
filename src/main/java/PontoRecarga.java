@@ -1,5 +1,5 @@
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PontoRecarga {
     private String nome;
     private String cep;
@@ -61,8 +62,6 @@ public class PontoRecarga {
 
     public void inserirDados(List<PontoRecarga> pontosRecarga) {
 
-        int totalLinhasBanco = obterLinhasInseridas();
-
         String sqlVerificar = """
                 SELECT COUNT(*)
                 FROM pontoDeRecarga
@@ -71,9 +70,6 @@ public class PontoRecarga {
 
         String sqlInserir = "INSERT INTO pontoDeRecarga (nome, cep, bairro, rua, numero, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
-        PontoRecargaHandler pontoRecargaHandler = new PontoRecargaHandler();
-//        pontoRecargaHandler.extrairEndereco(cep);
-
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmtVerificar = con.prepareStatement(sqlVerificar);
              PreparedStatement stmtInserir = con.prepareStatement(sqlInserir)) {
@@ -81,7 +77,6 @@ public class PontoRecarga {
             int totalLinhasInseridas = 0;
             logger.info("Iniciando inserção de dados.");
             for (PontoRecarga pontoRecarga : pontosRecarga) {
-//                if (pontosRecarga.indexOf(pontoRecarga) > totalLinhasBanco && totalLinhasInseridas < 10) {
 
                 stmtVerificar.setString(1, pontoRecarga.getNome());
                 stmtVerificar.setString(2, pontoRecarga.getCep());
@@ -91,53 +86,30 @@ public class PontoRecarga {
 
                     try (ResultSet rs = stmtVerificar.executeQuery()) {
                         if (rs.next() && rs.getInt(1) == 0) {
-                            logger.debug("Registro não encontrado no banco, preparando para inserção.");
 
-                            extrairEndereco(cep);
+                            if (!pontoRecarga.getRedeDeRecarga().isEmpty()) {
 
-                            stmtInserir.setString(1, pontoRecarga.getNome());
-                            stmtInserir.setString(2, pontoRecarga.getCep());
-                            stmtInserir.setString(3, pontoRecarga.getBairro());
-                            stmtInserir.setString(4, pontoRecarga.getRua());
-                            stmtInserir.setString(5, pontoRecarga.getNumero());
-                            stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
-                            stmtInserir.setString(7, pontoRecarga.getTipoConector());
-                            stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
+                                extrairEndereco(pontoRecarga);
 
-                            stmtInserir.executeUpdate();
-//                        logger.info("Registro inserido com sucesso: {}", pontoRecarga);
-                            logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getRua(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
+                                stmtInserir.setString(1, pontoRecarga.getNome());
+                                stmtInserir.setString(2, pontoRecarga.getCep());
+                                stmtInserir.setString(3, pontoRecarga.getBairro());
+                                stmtInserir.setString(4, pontoRecarga.getLogradouro());
+                                stmtInserir.setString(5, pontoRecarga.getNumero());
+                                stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
+                                stmtInserir.setString(7, pontoRecarga.getTipoConector());
+                                stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
 
-                            totalLinhasInseridas++;
+                                stmtInserir.executeUpdate();
 
-                        } else {
-                            logger.debug("Registro já existente: {}", pontoRecarga);
+                                logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getLogradouro(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
+
+                                totalLinhasInseridas++;
+                            }
+
                         }
                     }
                 }
-
-//                    try {
-//
-//                        stmtInserir.setString(1, pontoRecarga.getNome());
-//                        stmtInserir.setString(2, pontoRecarga.getCep());
-//                        stmtInserir.setString(3, pontoRecarga.getBairro());
-//                        stmtInserir.setString(4, pontoRecarga.getRua());
-//                        stmtInserir.setString(5, pontoRecarga.getNumero());
-//                        stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
-//                        stmtInserir.setString(7, pontoRecarga.getTipoConector());
-//                        stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
-//
-//                        stmtInserir.executeUpdate();
-//                        logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getRua(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
-//
-//                        totalLinhasInseridas++;
-//
-//                    } catch (SQLException e) {
-//                        logger.error("Erro ao inserir ponto de recarga: {}", e.getMessage());
-//                    }
-
-//                    totalLinhasInseridas++;
-//                }
             }
 
             if (totalLinhasInseridas > 0) {
@@ -154,8 +126,8 @@ public class PontoRecarga {
         }
     }
 
-    public void extrairEndereco(String cep) {
-        String url = "https://viacep.com.br/ws/" + cep + "/json/";
+    public void extrairEndereco(PontoRecarga pontoRecarga) {
+        String url = "https://viacep.com.br/ws/" + pontoRecarga.getCep() + "/json/";
 
         HttpClient client = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
@@ -168,17 +140,15 @@ public class PontoRecarga {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             if (response.statusCode() == 200) {
+
                 ObjectMapper mapper = new ObjectMapper();
-                PontoRecarga pontoRecarga = mapper.readValue(response.body(), PontoRecarga.class);
+                PontoRecarga pontoRecargaMapper = mapper.readValue(response.body(), PontoRecarga.class);
 
+                String logradouro = pontoRecargaMapper.getLogradouro();
+                String bairro = pontoRecargaMapper.getBairro();
 
-                String logradouro = pontoRecarga.getRua();
-                String bairro = pontoRecarga.getBairro();
-//                String localidade = pontoRecargaHandler.getLocalidade();
-
-                this.cep = cep;
-                this.logradouro = logradouro;
-                this.bairro = bairro;
+                pontoRecarga.setLogradouro(logradouro);
+                pontoRecarga.setBairro(bairro);
 
             } else {
                 System.out.println("Erro na consulta do CEP. Código: " + response.statusCode());
@@ -212,11 +182,11 @@ public class PontoRecarga {
         this.bairro = bairro;
     }
 
-    public String getRua() {
+    public String getLogradouro() {
         return logradouro;
     }
 
-    public void setRua(String rua) {
+    public void setLogradouro(String rua) {
         this.logradouro = rua;
     }
 

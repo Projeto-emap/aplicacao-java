@@ -1,22 +1,13 @@
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class PontoRecargaHandler extends LeitorPlanilha {
 
     private String cep;
@@ -50,16 +41,11 @@ public class PontoRecargaHandler extends LeitorPlanilha {
                 numero = extrairNumero(colEndereco);
                 cep = extrairCep(colEndereco);
 
-//                extrairEndereco(cep);
-
                 if (cep != null) {
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, "Bairro teste", "Rua teste", numero, qtdEstacoes, colTipoConector, colRede);
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, "", "", numero, qtdEstacoes, colTipoConector, colRede);
                     pontos.add(pontoRecarga);
                 }
 
-//                if (i == 10) {
-//                    break;
-//                }
             } catch (Exception rowException) {
                 logger.error("Erro ao inserir a linha: {}", row.getRowNum(), rowException);
             }
@@ -104,41 +90,6 @@ public class PontoRecargaHandler extends LeitorPlanilha {
 
         return null;
     }
-
-//    public void extrairEndereco(String cep) {
-//        String url = "https://viacep.com.br/ws/" + cep + "/json/";
-//
-//        HttpClient client = HttpClient.newBuilder()
-//                .connectTimeout(Duration.ofSeconds(10))
-//                .build();
-//        HttpRequest request = HttpRequest.newBuilder()
-//                .uri(URI.create(url))
-//                .GET()
-//                .build();
-//
-//        try {
-//            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//            if (response.statusCode() == 200) {
-//                ObjectMapper mapper = new ObjectMapper();
-//                PontoRecargaHandler pontoRecargaHandler = mapper.readValue(response.body(), PontoRecargaHandler.class);
-//
-//
-//                String logradouro = pontoRecargaHandler.getLogradouro();
-//                String bairro = pontoRecargaHandler.getBairro();
-//                String localidade = pontoRecargaHandler.getLocalidade();
-//
-//                this.cep = cep;
-//                this.logradouro = logradouro;
-//                this.bairro = bairro;
-//                this.localidade = localidade;
-//
-//            } else {
-//                System.out.println("Erro na consulta do CEP. Código: " + response.statusCode());
-//            }
-//        } catch (IOException | InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     public String getCep () {
         return cep;
