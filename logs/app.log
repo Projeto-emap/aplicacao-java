@@ -3562,3 +3562,361 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 04-12-2024 18:18:06 INFO  - Verificando dados existentes no banco de dados.
 04-12-2024 18:18:06 INFO  - Dados verificados com sucesso!
 04-12-2024 18:18:06 INFO  - Iniciando inserção de dados.
+08-12-2024 15:15:04 INFO  - Iniciando carregamento da planilha
+08-12-2024 15:15:09 DEBUG - Ignorando a linha de cabeçalho.
+08-12-2024 15:15:10 INFO  - Iniciando inserção de dados.
+08-12-2024 15:15:13 DEBUG - Linha inserida com sucesso: Nome - Zletric - WRK Tower, CEP - 01503-001, Bairro - Liberdade, Rua - Avenida da Liberdade, Número 823, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+08-12-2024 15:15:13 DEBUG - Linha inserida com sucesso: Nome - ibis budget SP Centro São João, CEP - 01036-100, Bairro - República, Rua - Avenida São João, Número 1140, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Power2Go
+08-12-2024 15:15:14 DEBUG - Linha inserida com sucesso: Nome - Power2Go - ibis budget SP Centro São João, CEP - 01036-100, Bairro - República, Rua - Avenida São João, Número 1140, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Power2Go
+08-12-2024 15:15:14 DEBUG - Linha inserida com sucesso: Nome - Sala São Paulo, CEP - 01218-020, Bairro - Campos Elíseos, Rua - Praça Júlio Prestes, Número 16, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Autocharge
+08-12-2024 15:15:15 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício Long Stay Bela Cintra, CEP - 01415-001, Bairro - Consolação, Rua - Rua Bela Cintra, Número 521, Quantidade de Estações - 3, Tipo de Conector - 3 Conectores Tipo 2, Rede de Recarga Rede Intelbras
+08-12-2024 15:15:15 DEBUG - Linha inserida com sucesso: Nome - Shopping Cidade São Paulo, CEP - 01333-001, Bairro - Bela Vista, Rua - Rua São Carlos do Pinhal, Número 525, Quantidade de Estações - 3, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Zletric
+08-12-2024 15:15:16 DEBUG - Linha inserida com sucesso: Nome - Shopping Pátio Higienópolis, CEP - 01238-000, Bairro - Higienópolis, Rua - Avenida Higienópolis, Número 618, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2 de 7 kW, Rede de Recarga Rede Sollus Indústria Eletrônica
+08-12-2024 15:15:16 DEBUG - Linha inserida com sucesso: Nome - Zletric - Shopping Cidade São Paulo, CEP - 01310-100, Bairro - Bela Vista, Rua - Avenida Paulista, Número 1230, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+08-12-2024 15:15:17 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Oregon, CEP - 01227-200, Bairro - Consolação, Rua - Avenida Angélica, Número 2133, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede WEMOB
+08-12-2024 15:15:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Setor Offices, CEP - 01310-928, Bairro - Bela Vista, Rua - Avenida Paulista, Número 2064, Quantidade de Estações - 4, Tipo de Conector - 4 Conectores Tipo 2, Rede de Recarga Rede Zletric
+08-12-2024 15:15:18 INFO  - Iniciando carregamento da planilha
+08-12-2024 15:15:22 DEBUG - Ignorando a linha de cabeçalho.
+08-12-2024 15:15:24 INFO  - Verificando dados existentes no banco de dados.
+08-12-2024 15:15:24 INFO  - Dados verificados com sucesso!
+08-12-2024 15:15:24 INFO  - Iniciando inserção de dados.
+09-12-2024 16:00:02 INFO  - Iniciando carregamento da planilha
+09-12-2024 16:00:04 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 16:00:04 INFO  - Iniciando inserção de dados.
+09-12-2024 16:00:08 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Cristal Tower, CEP - 01415-000, Bairro - Consolação, Rua - Rua Bela Cintra, Número 904, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 16:00:14 DEBUG - Linha inserida com sucesso: Nome - Zletric - Trianon Corporate, CEP - 01418-100, Bairro - Cerqueira César, Rua - Alameda Santos, Número 680, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 16:00:22 DEBUG - Linha inserida com sucesso: Nome - Zletric | Garagem Trianon, CEP - 01420-001, Bairro - Jardim Paulista, Rua - Alameda Jaú, Número 850, Quantidade de Estações - 4, Tipo de Conector - 2 Conectores CCS, Rede de Recarga Rede Zletric
+09-12-2024 16:00:26 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Bela Paulista, CEP - 01310-300, Bairro - Bela Vista, Rua - Avenida Paulista, Número 2421, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 16:00:29 DEBUG - Linha inserida com sucesso: Nome - Estacionamento Novo Stilo, CEP - 01413-000, Bairro - Cerqueira César, Rua - Rua Augusta, Número 1948, Quantidade de Estações - 1, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede WeCharge
+09-12-2024 16:00:31 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Varicred III, CEP - 04003-042, Bairro - Paraíso, Rua - Rua Doutor Rafael de Barros, Número 209, Quantidade de Estações - 4, Tipo de Conector - 4 Conectores Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 16:00:32 DEBUG - Linha inserida com sucesso: Nome - Zletric - The Prize Hall, CEP - 04004-000, Bairro - Paraíso, Rua - Rua Sampaio Viana, Número 253, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 16:00:33 DEBUG - Linha inserida com sucesso: Nome - Condomínio JFL_JML 747 - 1, 2, 3 e 4 + Bike, CEP - 01423-001, Bairro - Jardim Paulista, Rua - Rua José Maria Lisboa, Número 747, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Power2Go
+09-12-2024 16:00:34 DEBUG - Linha inserida com sucesso: Nome - C6 Bank - WeCharge Eletropostos, CEP - 01406-000, Bairro - Jardim Paulista, Rua - Avenida Nove de Julho, Número 3186, Quantidade de Estações - 2, Tipo de Conector - 2 Conectores Tipo 2, Rede de Recarga Rede WeCharge
+09-12-2024 16:00:34 DEBUG - Linha inserida com sucesso: Nome - Hotel Pestana, CEP - 04007-000, Bairro - Vila Mariana, Rua - Rua Tutóia, Número 77, Quantidade de Estações - 1, Tipo de Conector - 1 Conector Tipo 2, Rede de Recarga Rede Autocharge
+09-12-2024 16:00:35 INFO  - Iniciando carregamento da planilha
+09-12-2024 16:00:39 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 16:00:40 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 16:00:40 INFO  - Dados verificados com sucesso!
+09-12-2024 16:00:40 INFO  - Iniciando inserção de dados.
+09-12-2024 19:50:06 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:50:08 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:50:09 INFO  - Iniciando inserção de dados.
+09-12-2024 19:50:12 DEBUG - Linha inserida com sucesso: Nome - Paper House, CEP - 01426-001, Bairro - Cerqueira César, Rua - Rua Oscar Freire, Número 281, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Power2Go
+09-12-2024 19:50:13 ERROR - Erro ao se conectar com o banco de dados: Column 'numero' cannot be null
+09-12-2024 19:50:13 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:50:16 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:50:18 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 19:50:18 INFO  - Dados verificados com sucesso!
+09-12-2024 19:50:18 INFO  - Iniciando inserção de dados.
+09-12-2024 19:50:49 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:50:54 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:50:56 INFO  - Iniciando inserção de dados.
+09-12-2024 19:51:00 ERROR - Erro ao se conectar com o banco de dados: Column 'numero' cannot be null
+09-12-2024 19:51:00 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:51:04 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:51:06 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 19:51:06 INFO  - Dados verificados com sucesso!
+09-12-2024 19:51:06 INFO  - Iniciando inserção de dados.
+09-12-2024 19:56:08 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:56:10 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:56:11 INFO  - Iniciando inserção de dados.
+09-12-2024 19:56:14 DEBUG - Linha inserida com sucesso: Nome - Shopping D (1), CEP - 03033-020, Bairro - Canindé, Rua - Avenida Cruzeiro do Sul, Número 1100, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 19:56:14 DEBUG - Linha inserida com sucesso: Nome - Audi EVBox | Casa Florah, CEP - 01438-000, Bairro - Jardim América, Rua - Rua Colômbia, Número 84, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Autocharge
+09-12-2024 19:56:15 DEBUG - Linha inserida com sucesso: Nome - St. Marche | Perdizes, CEP - 05016-090, Bairro - Perdizes, Rua - Avenida Sumaré, Número 721, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Autocharge
+09-12-2024 19:56:16 DEBUG - Linha inserida com sucesso: Nome - 1Park Unidade Vila Mariana, CEP - 04009-002, Bairro - Vila Mariana, Rua - Rua Domingos de Morais, Número 1061, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede ChargeZone
+09-12-2024 19:56:16 DEBUG - Linha inserida com sucesso: Nome - Posto Ipiranga Peru, CEP - 01430-010, Bairro - Jardim América, Rua - Rua Engenheiro Alcides Barbosa, Número 203, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 19:56:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - City Hall, CEP - 04533-010, Bairro - Itaim Bibi, Rua - Rua Tabapuã, Número 81, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 19:56:17 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício CBS - 1 e 2, CEP - 04543-000, Bairro - Vila Nova Conceição, Rua - Avenida Presidente Juscelino Kubitschek, Número 50, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Power2Go
+09-12-2024 19:56:18 DEBUG - Linha inserida com sucesso: Nome - Zletric - Helbor Wide, CEP - 05402-400, Bairro - Pinheiros, Rua - Avenida Rebouças, Número 2636, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 19:56:19 DEBUG - Linha inserida com sucesso: Nome - Led Mall Barra Funda, CEP - 01139-003, Bairro - Várzea da Barra Funda, Rua - Avenida Marquês de São Vicente, Número 1619, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 19:56:19 DEBUG - Linha inserida com sucesso: Nome - Zletric - Torre 2000, CEP - 05422-001, Bairro - Pinheiros, Rua - Rua dos Pinheiros, Número 870, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 19:56:20 INFO  - Iniciando carregamento da planilha
+09-12-2024 19:56:25 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 19:56:27 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 19:56:27 INFO  - Dados verificados com sucesso!
+09-12-2024 19:56:27 INFO  - Iniciando inserção de dados.
+09-12-2024 20:00:03 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:00:05 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:00:05 INFO  - Iniciando inserção de dados.
+09-12-2024 20:00:09 ERROR - Erro ao se conectar com o banco de dados: Column 'tipoConector' cannot be null
+09-12-2024 20:00:09 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:00:12 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:00:13 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:00:13 INFO  - Dados verificados com sucesso!
+09-12-2024 20:00:13 INFO  - Iniciando inserção de dados.
+09-12-2024 20:01:39 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:01:40 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:01:41 INFO  - Iniciando inserção de dados.
+09-12-2024 20:01:45 DEBUG - Linha inserida com sucesso: Nome - BYD, CEP - 04260-020, Bairro - Vila Santa Eulalia, Rua - Avenida Doutor Ricardo Jafet, Número 1885, Quantidade de Estações - 3, Tipo de Conector - CCS, Rede de Recarga Rede Autocharge
+09-12-2024 20:01:46 ERROR - Erro ao se conectar com o banco de dados: Column 'tipoConector' cannot be null
+09-12-2024 20:01:46 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:01:51 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:01:52 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:01:52 INFO  - Dados verificados com sucesso!
+09-12-2024 20:01:52 INFO  - Iniciando inserção de dados.
+09-12-2024 20:03:25 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:03:28 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:03:29 INFO  - Iniciando inserção de dados.
+09-12-2024 20:03:33 ERROR - Erro ao se conectar com o banco de dados: Column 'tipoConector' cannot be null
+09-12-2024 20:03:33 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:03:35 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:03:36 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:03:36 INFO  - Dados verificados com sucesso!
+09-12-2024 20:03:36 INFO  - Iniciando inserção de dados.
+09-12-2024 20:04:14 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:04:16 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:04:17 INFO  - Iniciando inserção de dados.
+09-12-2024 20:04:20 ERROR - Erro ao se conectar com o banco de dados: Column 'tipoConector' cannot be null
+09-12-2024 20:04:20 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:04:21 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:04:22 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:04:22 INFO  - Dados verificados com sucesso!
+09-12-2024 20:04:23 INFO  - Iniciando inserção de dados.
+09-12-2024 20:06:45 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:06:47 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:06:48 INFO  - Iniciando inserção de dados.
+09-12-2024 20:06:50 DEBUG - Linha inserida com sucesso: Nome - Villa Grano Pães (2), CEP - 04038-030, Bairro - Vila Clementino, Rua - Rua Borges Lagoa, Número 371, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Intelbras
+09-12-2024 20:06:50 DEBUG - Linha inserida com sucesso: Nome - Villa Grano Pães, CEP - 04038-030, Bairro - Vila Clementino, Rua - Rua Borges Lagoa, Número 371, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Intelbras
+09-12-2024 20:06:51 DEBUG - Linha inserida com sucesso: Nome - Zletric - Bandeira Tower, CEP - 04532-001, Bairro - Itaim Bibi, Rua - Rua Bandeira Paulista, Número 530, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 20:06:51 DEBUG - Linha inserida com sucesso: Nome - Zletric - JK Tower, CEP - 04542-000, Bairro - Itaim Bibi, Rua - Rua Leopoldo Couto Magalhães Júnior, Número 110, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 20:06:51 DEBUG - Linha inserida com sucesso: Nome - TUPI - Shopping Santa Cruz, CEP - 04036-100, Bairro - Vila Mariana, Rua - Rua Domingos de Morais, Número 2654, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Tupinambá
+09-12-2024 20:06:52 DEBUG - Linha inserida com sucesso: Nome - Zletric - JK Financial Center, CEP - 04542-010, Bairro - Itaim Bibi, Rua - Rua Leopoldo Couto Magalhães Júnior, Número 510, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 20:06:52 DEBUG - Linha inserida com sucesso: Nome - Condomínio Realty JFL 125, CEP - 05402-600, Bairro - Pinheiros, Rua - Avenida Rebouças, Número 3084, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Power2Go
+09-12-2024 20:06:53 DEBUG - Linha inserida com sucesso: Nome - Ufficio Majore, CEP - 03174-000, Bairro - Quarta Parada, Rua - Rua Serra da Bocaina, Número 570, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Power2Go
+09-12-2024 20:06:53 DEBUG - Linha inserida com sucesso: Nome - Recarga (BandeiraPark - Sampaio Vidal), CEP - 01452-001, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 1154, Quantidade de Estações - 1, Tipo de Conector - Tipo 2, Rede de Recarga Rede Intelbras
+09-12-2024 20:06:54 DEBUG - Linha inserida com sucesso: Nome - Zletric - Sueste Plaza, CEP - 04534-004, Bairro - Itaim Bibi, Rua - Rua Joaquim Floriano, Número 960, Quantidade de Estações - 2, Tipo de Conector - Tipo 2, Rede de Recarga Rede Zletric
+09-12-2024 20:06:54 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:06:56 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:06:57 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:06:57 INFO  - Dados verificados com sucesso!
+09-12-2024 20:06:57 INFO  - Iniciando inserção de dados.
+09-12-2024 20:09:08 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:09:12 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:09:14 INFO  - Iniciando inserção de dados.
+09-12-2024 20:09:16 DEBUG - Linha inserida com sucesso: Nome - Iguatemi São Paulo (1), CEP - 01489-900, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 2232, Quantidade de Estações - 4, Tipo de Conector - tipo 2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:09:18 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:09:18 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:09:22 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:09:24 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:09:24 INFO  - Dados verificados com sucesso!
+09-12-2024 20:09:24 INFO  - Iniciando inserção de dados.
+09-12-2024 20:09:58 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:10:01 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:10:02 INFO  - Iniciando inserção de dados.
+09-12-2024 20:10:02 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:10:05 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:10:06 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:10:06 INFO  - Dados verificados com sucesso!
+09-12-2024 20:10:06 INFO  - Iniciando inserção de dados.
+09-12-2024 20:10:56 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:11:01 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:11:02 INFO  - Iniciando inserção de dados.
+09-12-2024 20:11:02 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:11:05 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:11:06 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:11:06 INFO  - Dados verificados com sucesso!
+09-12-2024 20:11:06 INFO  - Iniciando inserção de dados.
+09-12-2024 20:11:29 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:11:33 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:11:35 INFO  - Iniciando inserção de dados.
+09-12-2024 20:11:38 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:11:38 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:11:41 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:11:42 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:11:42 INFO  - Dados verificados com sucesso!
+09-12-2024 20:11:42 INFO  - Iniciando inserção de dados.
+09-12-2024 20:17:04 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:17:06 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:17:06 INFO  - Iniciando inserção de dados.
+09-12-2024 20:17:09 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:17:09 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:17:14 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:17:17 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:17:17 INFO  - Dados verificados com sucesso!
+09-12-2024 20:17:17 INFO  - Iniciando inserção de dados.
+09-12-2024 20:22:21 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:22:23 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:22:24 INFO  - Iniciando inserção de dados.
+09-12-2024 20:22:27 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:22:27 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:22:33 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:22:35 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:22:35 INFO  - Dados verificados com sucesso!
+09-12-2024 20:22:35 INFO  - Iniciando inserção de dados.
+09-12-2024 20:23:32 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:23:36 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:23:37 INFO  - Iniciando inserção de dados.
+09-12-2024 20:23:38 ERROR - Erro ao se conectar com o banco de dados: Table 'emap.pontoderecarga' doesn't exist
+09-12-2024 20:23:38 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:23:41 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:23:42 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:23:42 INFO  - Dados verificados com sucesso!
+09-12-2024 20:23:42 INFO  - Iniciando inserção de dados.
+09-12-2024 20:24:12 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:24:14 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:24:15 INFO  - Iniciando inserção de dados.
+09-12-2024 20:24:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - WRK Tower, CEP - 01503-001, Bairro - Liberdade, Rua - Avenida da Liberdade, Número 823, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:24:17 DEBUG - Linha inserida com sucesso: Nome - ibis budget SP Centro São João, CEP - 01036-100, Bairro - República, Rua - Avenida São João, Número 1140, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:24:18 DEBUG - Linha inserida com sucesso: Nome - Power2Go - ibis budget SP Centro São João, CEP - 01036-100, Bairro - República, Rua - Avenida São João, Número 1140, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:24:18 DEBUG - Linha inserida com sucesso: Nome - Sala São Paulo, CEP - 01218-020, Bairro - Campos Elíseos, Rua - Praça Júlio Prestes, Número 16, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+09-12-2024 20:24:19 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício Long Stay Bela Cintra, CEP - 01415-001, Bairro - Consolação, Rua - Rua Bela Cintra, Número 521, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Intelbras
+09-12-2024 20:24:19 DEBUG - Linha inserida com sucesso: Nome - Shopping Cidade São Paulo, CEP - 01333-001, Bairro - Bela Vista, Rua - Rua São Carlos do Pinhal, Número 525, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:24:20 DEBUG - Linha inserida com sucesso: Nome - Shopping Pátio Higienópolis, CEP - 01238-000, Bairro - Higienópolis, Rua - Avenida Higienópolis, Número 618, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:24:20 DEBUG - Linha inserida com sucesso: Nome - Zletric - Shopping Cidade São Paulo, CEP - 01310-100, Bairro - Bela Vista, Rua - Avenida Paulista, Número 1230, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:24:22 DEBUG - Linha inserida com sucesso: Nome - Eletrix - Edifício Oregon, CEP - 01227-200, Bairro - Consolação, Rua - Avenida Angélica, Número 2133, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede WEMOB
+09-12-2024 20:24:23 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Setor Offices, CEP - 01310-928, Bairro - Bela Vista, Rua - Avenida Paulista, Número 2064, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:24:24 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:24:26 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:24:27 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:24:27 INFO  - Dados verificados com sucesso!
+09-12-2024 20:24:27 INFO  - Iniciando inserção de dados.
+09-12-2024 20:33:32 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:33:34 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:33:35 INFO  - Iniciando inserção de dados.
+09-12-2024 20:33:39 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Cristal Tower, CEP - 01415-000, Bairro - Consolação, Rua - Rua Bela Cintra, Número 904, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:33:40 DEBUG - Linha inserida com sucesso: Nome - Zletric - Trianon Corporate, CEP - 01418-100, Bairro - Cerqueira César, Rua - Alameda Santos, Número 680, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:33:41 DEBUG - Linha inserida com sucesso: Nome - Zletric | Garagem Trianon, CEP - 01420-001, Bairro - Jardim Paulista, Rua - Alameda Jaú, Número 850, Quantidade de Estações - 4, Tipo de Conector - ccs, Rede de Recarga Rede Zletric
+09-12-2024 20:33:42 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Bela Paulista, CEP - 01310-300, Bairro - Bela Vista, Rua - Avenida Paulista, Número 2421, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:33:42 DEBUG - Linha inserida com sucesso: Nome - Estacionamento Novo Stilo, CEP - 01413-000, Bairro - Cerqueira César, Rua - Rua Augusta, Número 1948, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede WeCharge
+09-12-2024 20:33:43 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Varicred III, CEP - 04003-042, Bairro - Paraíso, Rua - Rua Doutor Rafael de Barros, Número 209, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:33:43 DEBUG - Linha inserida com sucesso: Nome - Zletric - The Prize Hall, CEP - 04004-000, Bairro - Paraíso, Rua - Rua Sampaio Viana, Número 253, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:33:43 DEBUG - Linha inserida com sucesso: Nome - Condomínio JFL_JML 747 - 1, 2, 3 e 4 + Bike, CEP - 01423-001, Bairro - Jardim Paulista, Rua - Rua José Maria Lisboa, Número 747, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:33:44 DEBUG - Linha inserida com sucesso: Nome - C6 Bank - WeCharge Eletropostos, CEP - 01406-000, Bairro - Jardim Paulista, Rua - Avenida Nove de Julho, Número 3186, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede WeCharge
+09-12-2024 20:33:44 DEBUG - Linha inserida com sucesso: Nome - Hotel Pestana, CEP - 04007-000, Bairro - Vila Mariana, Rua - Rua Tutóia, Número 77, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+09-12-2024 20:33:46 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:33:50 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:33:52 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:33:52 INFO  - Dados verificados com sucesso!
+09-12-2024 20:33:52 INFO  - Iniciando inserção de dados.
+09-12-2024 20:34:42 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:34:44 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:34:45 INFO  - Iniciando inserção de dados.
+09-12-2024 20:34:47 DEBUG - Linha inserida com sucesso: Nome - Paper House, CEP - 01426-001, Bairro - Cerqueira César, Rua - Rua Oscar Freire, Número 281, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:34:47 DEBUG - Linha inserida com sucesso: Nome - Shopping D (1), CEP - 03033-020, Bairro - Canindé, Rua - Avenida Cruzeiro do Sul, Número 1100, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:34:48 DEBUG - Linha inserida com sucesso: Nome - Audi EVBox | Casa Florah, CEP - 01438-000, Bairro - Jardim América, Rua - Rua Colômbia, Número 84, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+09-12-2024 20:34:48 DEBUG - Linha inserida com sucesso: Nome - St. Marche | Perdizes, CEP - 05016-090, Bairro - Perdizes, Rua - Avenida Sumaré, Número 721, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+09-12-2024 20:34:49 DEBUG - Linha inserida com sucesso: Nome - 1Park Unidade Vila Mariana, CEP - 04009-002, Bairro - Vila Mariana, Rua - Rua Domingos de Morais, Número 1061, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede ChargeZone
+09-12-2024 20:34:49 DEBUG - Linha inserida com sucesso: Nome - Posto Ipiranga Peru, CEP - 01430-010, Bairro - Jardim América, Rua - Rua Engenheiro Alcides Barbosa, Número 203, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:34:49 DEBUG - Linha inserida com sucesso: Nome - Zletric - City Hall, CEP - 04533-010, Bairro - Itaim Bibi, Rua - Rua Tabapuã, Número 81, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:34:50 DEBUG - Linha inserida com sucesso: Nome - Condomínio Edifício CBS - 1 e 2, CEP - 04543-000, Bairro - Vila Nova Conceição, Rua - Avenida Presidente Juscelino Kubitschek, Número 50, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:34:50 DEBUG - Linha inserida com sucesso: Nome - Zletric - Helbor Wide, CEP - 05402-400, Bairro - Pinheiros, Rua - Avenida Rebouças, Número 2636, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:34:51 DEBUG - Linha inserida com sucesso: Nome - Led Mall Barra Funda, CEP - 01139-003, Bairro - Várzea da Barra Funda, Rua - Avenida Marquês de São Vicente, Número 1619, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:34:51 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:34:53 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:34:54 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:34:54 INFO  - Dados verificados com sucesso!
+09-12-2024 20:34:54 INFO  - Iniciando inserção de dados.
+09-12-2024 20:35:36 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:35:38 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:35:39 INFO  - Iniciando inserção de dados.
+09-12-2024 20:35:40 DEBUG - Linha inserida com sucesso: Nome - Zletric - Torre 2000, CEP - 05422-001, Bairro - Pinheiros, Rua - Rua dos Pinheiros, Número 870, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:35:41 DEBUG - Linha inserida com sucesso: Nome - BYD, CEP - 04260-020, Bairro - Vila Santa Eulalia, Rua - Avenida Doutor Ricardo Jafet, Número 1885, Quantidade de Estações - 3, Tipo de Conector - ccs, Rede de Recarga Rede Autocharge
+09-12-2024 20:35:41 DEBUG - Linha inserida com sucesso: Nome - Villa Grano Pães (2), CEP - 04038-030, Bairro - Vila Clementino, Rua - Rua Borges Lagoa, Número 371, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Intelbras
+09-12-2024 20:35:42 DEBUG - Linha inserida com sucesso: Nome - Villa Grano Pães, CEP - 04038-030, Bairro - Vila Clementino, Rua - Rua Borges Lagoa, Número 371, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Intelbras
+09-12-2024 20:35:42 DEBUG - Linha inserida com sucesso: Nome - Zletric - Bandeira Tower, CEP - 04532-001, Bairro - Itaim Bibi, Rua - Rua Bandeira Paulista, Número 530, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:35:43 DEBUG - Linha inserida com sucesso: Nome - Zletric - JK Tower, CEP - 04542-000, Bairro - Itaim Bibi, Rua - Rua Leopoldo Couto Magalhães Júnior, Número 110, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:35:43 DEBUG - Linha inserida com sucesso: Nome - TUPI - Shopping Santa Cruz, CEP - 04036-100, Bairro - Vila Mariana, Rua - Rua Domingos de Morais, Número 2654, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Tupinambá
+09-12-2024 20:35:43 DEBUG - Linha inserida com sucesso: Nome - Zletric - JK Financial Center, CEP - 04542-010, Bairro - Itaim Bibi, Rua - Rua Leopoldo Couto Magalhães Júnior, Número 510, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:35:44 DEBUG - Linha inserida com sucesso: Nome - Condomínio Realty JFL 125, CEP - 05402-600, Bairro - Pinheiros, Rua - Avenida Rebouças, Número 3084, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:35:44 DEBUG - Linha inserida com sucesso: Nome - Ufficio Majore, CEP - 03174-000, Bairro - Quarta Parada, Rua - Rua Serra da Bocaina, Número 570, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 20:35:45 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:35:47 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:35:49 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:35:49 INFO  - Dados verificados com sucesso!
+09-12-2024 20:35:49 INFO  - Iniciando inserção de dados.
+09-12-2024 20:36:27 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:36:29 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:36:30 INFO  - Iniciando inserção de dados.
+09-12-2024 20:36:33 DEBUG - Linha inserida com sucesso: Nome - Recarga (BandeiraPark - Sampaio Vidal), CEP - 01452-001, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 1154, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Intelbras
+09-12-2024 20:36:33 DEBUG - Linha inserida com sucesso: Nome - Zletric - Sueste Plaza, CEP - 04534-004, Bairro - Itaim Bibi, Rua - Rua Joaquim Floriano, Número 960, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 20:36:34 DEBUG - Linha inserida com sucesso: Nome - Iguatemi São Paulo (1), CEP - 01489-900, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 2232, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:36:35 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:36:35 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:36:38 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:36:39 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:36:39 INFO  - Dados verificados com sucesso!
+09-12-2024 20:36:39 INFO  - Iniciando inserção de dados.
+09-12-2024 20:39:46 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:39:48 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:39:49 INFO  - Iniciando inserção de dados.
+09-12-2024 20:39:52 DEBUG - Linha inserida com sucesso: Nome - Iguatemi São Paulo (1), CEP - 01489-900, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 2232, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 20:39:53 ERROR - Erro ao se conectar com o banco de dados: Column 'bairro' cannot be null
+09-12-2024 20:39:53 INFO  - Iniciando carregamento da planilha
+09-12-2024 20:39:57 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 20:40:00 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 20:40:00 INFO  - Dados verificados com sucesso!
+09-12-2024 20:40:00 INFO  - Iniciando inserção de dados.
+09-12-2024 21:04:02 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:04:04 INFO  - Iniciando inserção de dados.
+09-12-2024 21:04:04 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:04:08 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:04:10 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 21:04:10 INFO  - Dados verificados com sucesso!
+09-12-2024 21:04:10 INFO  - Iniciando inserção de dados.
+09-12-2024 21:04:38 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:04:42 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:04:44 INFO  - Iniciando inserção de dados.
+09-12-2024 21:04:46 DEBUG - Linha inserida com sucesso: Nome - Iguatemi São Paulo (1), CEP - 01489-900, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 2232, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 21:04:46 ERROR - CEP inválido ou não encontrado: 04542-200
+09-12-2024 21:04:46 DEBUG - Linha inserida com sucesso: Nome - Infinity Tower - Zletric, CEP - 04542-200, Bairro - , Rua - , Número 700, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:47 DEBUG - Linha inserida com sucesso: Nome - Posto Ipiranga, CEP - 05442-000, Bairro - Sumarezinho, Rua - Rua Pereira Leite, Número 27, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 21:04:47 DEBUG - Linha inserida com sucesso: Nome - Condomínio JFL_VHouse, CEP - 05423-000, Bairro - Pinheiros, Rua - Avenida Eusébio Matoso, Número 218, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 21:04:47 DEBUG - Linha inserida com sucesso: Nome - Condomínio Seculum - Zletric, CEP - 01453-050, Bairro - Itaim Bibi, Rua - Rua Doutor José Gonçalves de Oliveira, Número 116, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:48 DEBUG - Linha inserida com sucesso: Nome - Zletric - Capital Plaza, CEP - 05419-000, Bairro - Pinheiros, Rua - Avenida Pedroso de Morais, Número 1553, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:48 DEBUG - Linha inserida com sucesso: Nome - Zletric - Vista Faria Lima, CEP - 04538-000, Bairro - Vila Nova Conceição, Rua - Rua Professor Atílio Innocenti, Número 165, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:49 DEBUG - Linha inserida com sucesso: Nome - Zletric - Faria Lima Financial Center, CEP - 04538-132, Bairro - Itaim Bibi, Rua - Avenida Brigadeiro Faria Lima, Número 3400, Quantidade de Estações - 6, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:49 DEBUG - Linha inserida com sucesso: Nome - Zletric - IBMEC, CEP - 05428-070, Bairro - Pinheiros, Rua - Rua Sumidouro, Número 89, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:49 DEBUG - Linha inserida com sucesso: Nome - Zletric - Slaviero Essential Flat, CEP - 04514-100, Bairro - Vila Uberabinha, Rua - Rua Tuim, Número 18, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:04:50 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:04:52 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:04:54 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 21:04:54 INFO  - Dados verificados com sucesso!
+09-12-2024 21:04:54 INFO  - Iniciando inserção de dados.
+09-12-2024 21:15:15 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:15:18 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:15:19 INFO  - Iniciando inserção de dados.
+09-12-2024 21:15:19 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:15:27 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:15:30 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 21:15:30 INFO  - Dados verificados com sucesso!
+09-12-2024 21:15:30 INFO  - Iniciando inserção de dados.
+09-12-2024 21:18:08 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:18:11 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:18:12 INFO  - Iniciando inserção de dados.
+09-12-2024 21:18:14 DEBUG - Linha inserida com sucesso: Nome - Iguatemi São Paulo (1), CEP - 01489-900, Bairro - Jardim Paulistano, Rua - Avenida Brigadeiro Faria Lima, Número 2232, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 21:18:15 ERROR - CEP inválido ou não encontrado: 04542-200
+09-12-2024 21:18:15 ERROR - CEP inválido ou não encontrado: 04542-200
+09-12-2024 21:18:16 DEBUG - Linha inserida com sucesso: Nome - Posto Ipiranga, CEP - 05442-000, Bairro - Sumarezinho, Rua - Rua Pereira Leite, Número 27, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+09-12-2024 21:18:16 DEBUG - Linha inserida com sucesso: Nome - Condomínio JFL_VHouse, CEP - 05423-000, Bairro - Pinheiros, Rua - Avenida Eusébio Matoso, Número 218, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 21:18:17 DEBUG - Linha inserida com sucesso: Nome - Condomínio Seculum - Zletric, CEP - 01453-050, Bairro - Itaim Bibi, Rua - Rua Doutor José Gonçalves de Oliveira, Número 116, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - Capital Plaza, CEP - 05419-000, Bairro - Pinheiros, Rua - Avenida Pedroso de Morais, Número 1553, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:18 DEBUG - Linha inserida com sucesso: Nome - Zletric - Vista Faria Lima, CEP - 04538-000, Bairro - Vila Nova Conceição, Rua - Rua Professor Atílio Innocenti, Número 165, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:18 DEBUG - Linha inserida com sucesso: Nome - Zletric - Faria Lima Financial Center, CEP - 04538-132, Bairro - Itaim Bibi, Rua - Avenida Brigadeiro Faria Lima, Número 3400, Quantidade de Estações - 6, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:18 DEBUG - Linha inserida com sucesso: Nome - Zletric - IBMEC, CEP - 05428-070, Bairro - Pinheiros, Rua - Rua Sumidouro, Número 89, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:19 DEBUG - Linha inserida com sucesso: Nome - Zletric - Slaviero Essential Flat, CEP - 04514-100, Bairro - Vila Uberabinha, Rua - Rua Tuim, Número 18, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:18:19 DEBUG - Linha inserida com sucesso: Nome - Colonial Racing, CEP - 04543-000, Bairro - Vila Nova Conceição, Rua - Avenida Presidente Juscelino Kubitschek, Número 1090, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Enel X Way
+09-12-2024 21:18:20 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:18:24 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:18:26 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 21:18:26 INFO  - Dados verificados com sucesso!
+09-12-2024 21:18:26 INFO  - Iniciando inserção de dados.
+09-12-2024 21:44:13 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:44:15 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:44:16 INFO  - Iniciando inserção de dados.
+09-12-2024 21:44:18 ERROR - CEP inválido ou não encontrado: 04542-200
+09-12-2024 21:44:18 ERROR - CEP inválido ou não encontrado: 04542-200
+09-12-2024 21:44:19 DEBUG - Linha inserida com sucesso: Nome - Tupinambá | Netpark Birman 29, CEP - 04538-133, Bairro - Itaim Bibi, Rua - Avenida Brigadeiro Faria Lima, Número 3729, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Tupinambá
+09-12-2024 21:44:19 DEBUG - Linha inserida com sucesso: Nome - Zletric - Faria Lima Square, CEP - 04538-132, Bairro - Itaim Bibi, Rua - Avenida Brigadeiro Faria Lima, Número 3600, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:44:20 DEBUG - Linha inserida com sucesso: Nome - McDonald's JK (Em Breve), CEP - 04538-001, Bairro - Vila Nova Conceição, Rua - Rua Professor Atílio Innocenti, Número 376, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+09-12-2024 21:44:20 DEBUG - Linha inserida com sucesso: Nome - Zletric | Posto BR Bangkok, CEP - 05423-000, Bairro - Pinheiros, Rua - Avenida Eusébio Matoso, Número 488, Quantidade de Estações - 1, Tipo de Conector - ccs, Rede de Recarga Rede Zletric
+09-12-2024 21:44:21 DEBUG - Linha inserida com sucesso: Nome - Zletric - Metro Office II, CEP - 05424-000, Bairro - Pinheiros, Rua - Rua Butantã, Número 194, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:44:21 DEBUG - Linha inserida com sucesso: Nome - Power2Go - Mercure SP Moema Hotel, CEP - 04515-010, Bairro - Indianópolis, Rua - Avenida Lavandisca, Número 365, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+09-12-2024 21:44:21 DEBUG - Linha inserida com sucesso: Nome - Zletric - Riverside, CEP - 01455-000, Bairro - Jardim Europa, Rua - Rua Hungria, Número 1240, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:44:22 DEBUG - Linha inserida com sucesso: Nome - Shopping Metrô Tatuapé, CEP - 03306-010, Bairro - Cidade Mãe do Céu, Rua - Rua Domingos Agostim, Número 91, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Tupinambá
+09-12-2024 21:44:22 DEBUG - Linha inserida com sucesso: Nome - Zletric - Nações Unidas III, CEP - 05425-000, Bairro - Pinheiros, Rua - Rua Eugênio de Medeiros, Número 303, Quantidade de Estações - 6, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:44:23 DEBUG - Linha inserida com sucesso: Nome - Zletric - Edifício Passarelli, CEP - 05424-010, Bairro - Pinheiros, Rua - Rua Pais Leme, Número 524, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+09-12-2024 21:44:23 INFO  - Iniciando carregamento da planilha
+09-12-2024 21:44:29 DEBUG - Ignorando a linha de cabeçalho.
+09-12-2024 21:44:30 INFO  - Verificando dados existentes no banco de dados.
+09-12-2024 21:44:30 INFO  - Dados verificados com sucesso!
+09-12-2024 21:44:30 INFO  - Iniciando inserção de dados.

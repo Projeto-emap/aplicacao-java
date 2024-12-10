@@ -38,11 +38,12 @@ public class PontoRecargaHandler extends LeitorPlanilha {
                 String colRede = row.getCell(10).getStringCellValue();
 
                 Integer qtdEstacoes = formatarQtdEstacoes(colQtdEstacoes);
+                String tipoConector = formatarTipoConector(colTipoConector);
                 numero = extrairNumero(colEndereco);
                 cep = extrairCep(colEndereco);
 
-                if (cep != null) {
-                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, "", "", numero, qtdEstacoes, colTipoConector, colRede);
+                if (cep != null && numero != null && tipoConector != null && !colRede.isEmpty()) {
+                    PontoRecarga pontoRecarga = new PontoRecarga(colNome, cep, "", "", numero, qtdEstacoes, tipoConector, colRede);
                     pontos.add(pontoRecarga);
                 }
 
@@ -63,6 +64,25 @@ public class PontoRecargaHandler extends LeitorPlanilha {
         }
 
         return null;
+    }
+
+    public String formatarTipoConector(String tipoConector) {
+        String regex1 = "\\bTipo \\d+\\b";
+        String regex2 = "\\bCCS\\b";
+
+        Pattern pattern1 = Pattern.compile(regex1);
+        Matcher matcher1 = pattern1.matcher(tipoConector);
+
+        Pattern pattern2 = Pattern.compile(regex2);
+        Matcher matcher2 = pattern2.matcher(tipoConector);
+
+        if (matcher1.find()) {
+            return matcher1.group().toLowerCase().replaceAll("\\s", "");
+        } else if (matcher2.find()) {
+            return matcher2.group().toLowerCase().replaceAll("\\s", "");
+        } else {
+            return null;
+        }
     }
 
     public String extrairNumero(String endereco) {

@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,24 +42,6 @@ public class PontoRecarga {
         this.redeDeRecarga = redeDeRecarga;
     }
 
-    public Integer obterLinhasInseridas() {
-        String sql = "SELECT COUNT(*) as totalLinhas FROM pontoDeRecarga";
-        int totalLinhasBanco = 0;
-
-        logger.info("Verificando dados existentes no banco de dados.");
-        try (Connection con = ConexaoBanco.getConnection();
-             PreparedStatement stmt = con.prepareStatement(sql)) {
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                totalLinhasBanco = rs.getInt("totalLinhas");
-            }
-        } catch (SQLException e) {
-            logger.error("Falha ao capturar arquivos existentes no banco de dados: {}", e.getMessage());
-        }
-
-        return totalLinhasBanco;
-    }
 
     public void inserirDados(List<PontoRecarga> pontosRecarga) {
 
@@ -68,7 +51,7 @@ public class PontoRecarga {
                 WHERE nome = ? AND cep = ? AND numero = ?
         """;
 
-        String sqlInserir = "INSERT INTO pontoDeRecarga (nome, cep, bairro, rua, numero, qtdEstacoes, tipoConector, redeDeRecarga) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sqlInserir = "INSERT INTO pontoDeRecarga (nome, cep, bairro, rua, numero, qtdEstacoes, tipoConector, redeDeRecarga, fkUsuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 1)";
 
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmtVerificar = con.prepareStatement(sqlVerificar);
@@ -91,20 +74,23 @@ public class PontoRecarga {
 
                                 extrairEndereco(pontoRecarga);
 
-                                stmtInserir.setString(1, pontoRecarga.getNome());
-                                stmtInserir.setString(2, pontoRecarga.getCep());
-                                stmtInserir.setString(3, pontoRecarga.getBairro());
-                                stmtInserir.setString(4, pontoRecarga.getLogradouro());
-                                stmtInserir.setString(5, pontoRecarga.getNumero());
-                                stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
-                                stmtInserir.setString(7, pontoRecarga.getTipoConector());
-                                stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
+                                if (!pontoRecarga.getBairro().isEmpty() && !pontoRecarga.getLogradouro().isEmpty()) {
 
-                                stmtInserir.executeUpdate();
+                                    stmtInserir.setString(1, pontoRecarga.getNome());
+                                    stmtInserir.setString(2, pontoRecarga.getCep());
+                                    stmtInserir.setString(3, pontoRecarga.getBairro());
+                                    stmtInserir.setString(4, pontoRecarga.getLogradouro());
+                                    stmtInserir.setString(5, pontoRecarga.getNumero());
+                                    stmtInserir.setInt(6, pontoRecarga.getQtdEstacoes());
+                                    stmtInserir.setString(7, pontoRecarga.getTipoConector());
+                                    stmtInserir.setString(8, pontoRecarga.getRedeDeRecarga());
 
-                                logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getLogradouro(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
+                                    stmtInserir.executeUpdate();
 
-                                totalLinhasInseridas++;
+                                    logger.debug("Linha inserida com sucesso: Nome - {}, CEP - {}, Bairro - {}, Rua - {}, Número {}, Quantidade de Estações - {}, Tipo de Conector - {}, Rede de Recarga {}", pontoRecarga.getNome(), pontoRecarga.getCep(), pontoRecarga.getBairro(), pontoRecarga.getLogradouro(), pontoRecarga.getNumero(), pontoRecarga.getQtdEstacoes(), pontoRecarga.getTipoConector(), pontoRecarga.getRedeDeRecarga());
+
+                                    totalLinhasInseridas++;
+                                }
                             }
 
                         }
@@ -142,16 +128,20 @@ public class PontoRecarga {
             if (response.statusCode() == 200) {
 
                 ObjectMapper mapper = new ObjectMapper();
-                PontoRecarga pontoRecargaMapper = mapper.readValue(response.body(), PontoRecarga.class);
+                JsonNode jsonNode = mapper.readTree(response.body());
 
-                String logradouro = pontoRecargaMapper.getLogradouro();
-                String bairro = pontoRecargaMapper.getBairro();
+                if (jsonNode.has("erro") && jsonNode.get("erro").asBoolean()) {
+                    logger.error("CEP inválido ou não encontrado: {}", pontoRecarga.getCep());
+                } else {
 
-                pontoRecarga.setLogradouro(logradouro);
-                pontoRecarga.setBairro(bairro);
+                    String logradouro = jsonNode.path("logradouro").asText();
+                    String bairro = jsonNode.path("bairro").asText();
 
+                    pontoRecarga.setLogradouro(logradouro);
+                    pontoRecarga.setBairro(bairro);
+                }
             } else {
-                System.out.println("Erro na consulta do CEP. Código: " + response.statusCode());
+                logger.error("Erro na consulta do CEP. Código: " + response.statusCode());
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
@@ -220,5 +210,19 @@ public class PontoRecarga {
 
     public void setRedeDeRecarga(String redeDeRecarga) {
         this.redeDeRecarga = redeDeRecarga;
+    }
+
+    @Override
+    public String toString() {
+        return "PontoRecarga{" +
+                "nome='" + nome + '\'' +
+                ", cep='" + cep + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", logradouro='" + logradouro + '\'' +
+                ", numero='" + numero + '\'' +
+                ", qtdEstacoes=" + qtdEstacoes +
+                ", tipoConector='" + tipoConector + '\'' +
+                ", redeDeRecarga='" + redeDeRecarga + '\'' +
+                '}';
     }
 }
