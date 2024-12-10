@@ -4,7 +4,7 @@ public class App {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-//        String NOME_BUCKET = System.getenv("NOME_BUCKET");
+        String NOME_BUCKET = System.getenv("NOME_BUCKET");
 
         PontoRecargaHandler pontoRecargaHandler = new PontoRecargaHandler();
         pontoRecargaHandler.carregarPlanilha("C:/Users/natha/emap/pontos-recarga.xlsx");

@@ -3920,3 +3920,43 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 09-12-2024 21:44:30 INFO  - Verificando dados existentes no banco de dados.
 09-12-2024 21:44:30 INFO  - Dados verificados com sucesso!
 09-12-2024 21:44:30 INFO  - Iniciando inserção de dados.
+10-12-2024 01:05:08 INFO  - Iniciando carregamento da planilha
+10-12-2024 01:05:10 DEBUG - Ignorando a linha de cabeçalho.
+10-12-2024 01:05:11 INFO  - Iniciando inserção de dados.
+10-12-2024 01:05:15 ERROR - CEP inválido ou não encontrado: 04542-200
+10-12-2024 01:05:16 ERROR - CEP inválido ou não encontrado: 04542-200
+10-12-2024 01:05:16 DEBUG - Linha inserida com sucesso: Nome - Zletric - Maternidade São Luiz Star, CEP - 04552-050, Bairro - Vila Olímpia, Rua - Rua Helena, Número 29, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - Atrium V, CEP - 04551-010, Bairro - Vila Olímpia, Rua - Rua Fidêncio Ramos, Número 195, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:17 DEBUG - Linha inserida com sucesso: Nome - Zletric - Esporte Clube Sirio, CEP - 04062-001, Bairro - Indianópolis, Rua - Avenida Indianópolis, Número 1192, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:18 DEBUG - Linha inserida com sucesso: Nome - Condomínio Continental Square, CEP - 04546-004, Bairro - Vila Olímpia, Rua - Rua Casa do Ator, Número 205, Quantidade de Estações - 4, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:18 DEBUG - Linha inserida com sucesso: Nome - JK Iguatemi (1), CEP - 04543-011, Bairro - Vila Nova Conceição, Rua - Avenida Presidente Juscelino Kubitschek, Número 2041, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+10-12-2024 01:05:19 DEBUG - Linha inserida com sucesso: Nome - Condomínio JFL_GO 850 - 1 e 2, CEP - 04547-003, Bairro - Vila Olímpia, Rua - Rua Gomes de Carvalho, Número 850, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Power2Go
+10-12-2024 01:05:19 DEBUG - Linha inserida com sucesso: Nome - Zletric - Atrium IX, CEP - 04552-000, Bairro - Vila Olímpia, Rua - Rua do Rocio, Número 350, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:20 DEBUG - Linha inserida com sucesso: Nome - Shopping Vila Olímpia, CEP - 04551-000, Bairro - Vila Olímpia, Rua - Rua Olimpíadas, Número 360, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+10-12-2024 01:05:20 DEBUG - Linha inserida com sucesso: Nome - Zletric - Business Center, CEP - 04547-005, Bairro - Vila Olímpia, Rua - Rua Gomes de Carvalho, Número 1306, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 01:05:21 DEBUG - Linha inserida com sucesso: Nome - Tupinambá | Netpark Teatro Santander, CEP - 04543-011, Bairro - Vila Nova Conceição, Rua - Avenida Presidente Juscelino Kubitschek, Número 2041, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Tupinambá
+10-12-2024 01:05:22 INFO  - Iniciando carregamento da planilha
+10-12-2024 01:05:29 DEBUG - Ignorando a linha de cabeçalho.
+10-12-2024 01:05:32 INFO  - Verificando dados existentes no banco de dados.
+10-12-2024 01:05:32 INFO  - Dados verificados com sucesso!
+10-12-2024 01:05:32 INFO  - Iniciando inserção de dados.
+10-12-2024 16:29:36 INFO  - Iniciando carregamento da planilha
+10-12-2024 16:29:44 DEBUG - Ignorando a linha de cabeçalho.
+10-12-2024 16:29:48 INFO  - Iniciando inserção de dados.
+10-12-2024 16:29:54 ERROR - CEP inválido ou não encontrado: 04542-200
+10-12-2024 16:29:54 ERROR - CEP inválido ou não encontrado: 04542-200
+10-12-2024 16:29:55 DEBUG - Linha inserida com sucesso: Nome - Zletric - Boulevard Sul, CEP - 04547-006, Bairro - Vila Olímpia, Rua - Rua Gomes de Carvalho, Número 1666, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:29:56 DEBUG - Linha inserida com sucesso: Nome - Posto Ipiranga, CEP - 04553-012, Bairro - Vila Olímpia, Rua - Avenida dos Bandeirantes, Número 3245, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+10-12-2024 16:29:56 DEBUG - Linha inserida com sucesso: Nome - Zletric - Condomínio Brasilinterpart, CEP - 05077-051, Bairro - Lapa, Rua - Rua Guararapes, Número 2064, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:29:57 DEBUG - Linha inserida com sucesso: Nome - Condomínio Anália Business Center, CEP - 03348-030, Bairro - Vila Invernada, Rua - Rua Professor Giuliani, Número 1844, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:29:57 DEBUG - Linha inserida com sucesso: Nome - Shopping Anália Franco, CEP - 03342-000, Bairro - Vila Regente Feijó, Rua - Avenida Regente Feijó, Número 1739, Quantidade de Estações - 7, Tipo de Conector - tipo2, Rede de Recarga Rede Sollus Indústria Eletrônica
+10-12-2024 16:29:58 DEBUG - Linha inserida com sucesso: Nome - Zletric - Villa Lobos, CEP - 05477-000, Bairro - Jardim Universidade Pinheiros, Rua - Avenida Doutora Ruth Cardoso, Número 4777, Quantidade de Estações - 3, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:29:58 DEBUG - Linha inserida com sucesso: Nome - Landmark - Zletric, CEP - 04578-000, Bairro - Brooklin Paulista, Rua - Avenida das Nações Unidas, Número 12399, Quantidade de Estações - 2, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:29:59 DEBUG - Linha inserida com sucesso: Nome - Speed Distribuidora, CEP - 04160-000, Bairro - Vila das Mercês, Rua - Rua Dom Vilares, Número 85, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Intelbras
+10-12-2024 16:29:59 DEBUG - Linha inserida com sucesso: Nome - Zletric | WTC World Trade Center, CEP - 04578-903, Bairro - Brooklin Paulista, Rua - Avenida das Nações Unidas, Número 12551, Quantidade de Estações - 7, Tipo de Conector - tipo2, Rede de Recarga Rede Zletric
+10-12-2024 16:30:00 DEBUG - Linha inserida com sucesso: Nome - Bubbles Lava Rápido, CEP - 05581-001, Bairro - Butantã, Rua - Avenida Corifeu de Azevedo Marques, Número 1511, Quantidade de Estações - 1, Tipo de Conector - tipo2, Rede de Recarga Rede Autocharge
+10-12-2024 16:30:02 INFO  - Iniciando carregamento da planilha
+10-12-2024 16:30:09 DEBUG - Ignorando a linha de cabeçalho.
+10-12-2024 16:30:12 INFO  - Verificando dados existentes no banco de dados.
+10-12-2024 16:30:12 INFO  - Dados verificados com sucesso!
+10-12-2024 16:30:12 INFO  - Iniciando inserção de dados.

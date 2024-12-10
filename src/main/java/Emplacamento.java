@@ -53,8 +53,6 @@ public class Emplacamento {
     public void inserirDados(List<Emplacamento> emplacamentos) {
         int totalLinhasBanco = obterLinhasInseridas();
 
-//        String sql = "INSERT INTO emplacamento (qtdCarros, tipoCombustivel, mesEmplacamento, anoEmplacamento, procedencia) VALUES (?, ?, ?, ?, ?)";
-
         String sql = """
             INSERT INTO emplacamento (qtdCarros, tipoCombustivel, mesEmplacamento, anoEmplacamento, procedencia)
             SELECT ?, ?, ?, ?, ?
@@ -64,7 +62,6 @@ public class Emplacamento {
             );
         """;
 
-
         try (Connection con = ConexaoBanco.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
 
@@ -72,7 +69,6 @@ public class Emplacamento {
             if (emplacamentos != null && !emplacamentos.isEmpty()) {
                 logger.info("Iniciando inserção de dados.");
                 for (Emplacamento emplacamento : emplacamentos) {
-//                    if (emplacamentos.indexOf(emplacamento) + 1 > totalLinhasBanco && totalLinhasInseridas < 10) {
 
                     if (totalLinhasInseridas < 10) {
 

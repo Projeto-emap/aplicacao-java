@@ -24,13 +24,13 @@ public class Slack {
 
         this.mensagensEmplacamento = new ArrayList<>();
         mensagensEmplacamento.add("🚗 Novos emplacamentos adicionados! Consulte os dados para mais insights.");
-        mensagensEmplacamento.add("📊 Atualização concluída: emplacamentos registrados no sistema.");
-        mensagensEmplacamento.add("⚡ Novos emplacamentos detectados! Verifique os dados atualizados agora mesmo.");
+        mensagensEmplacamento.add("📊 Atualização concluída: mais emplacamentos foram registrados no sistema.");
+        mensagensEmplacamento.add("⚡ Novos emplacamentos detectados!");
 
         this.mensagensPontoRecarga = new ArrayList<>();
-        mensagensPontoRecarga.add("🔋 Novos pontos de recarga adicionados! Explore os novos locais disponíveis.");
-        mensagensPontoRecarga.add("📍 Atualização concluída: mais locais para recarregar seu veículo.");
-        mensagensPontoRecarga.add("⚡ Novos registros de pontos de recarga disponíveis! Consulte a base de dados.");
+        mensagensPontoRecarga.add("🔋 Novos pontos de recarga adicionados! Explore as novas oportunidades disponíveis.");
+        mensagensPontoRecarga.add("📍 Atualização concluída: mais locais pontos de recarga foram registrados no sistema.");
+        mensagensPontoRecarga.add("⚡ Novos registros de pontos de recarga disponíveis!");
     }
 
     public String getMensagemAleatoria(List<String> mensagens) {
